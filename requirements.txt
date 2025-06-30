@@ -1,0 +1,11 @@
+torch>=1.9.0
+numpy>=1.19.5
+psutil>=5.8.0
+networkx>=2.5
+scapy>=2.4.5
+matplotlib>=3.4.3
+pandas>=1.3.3
+netifaces>=0.11.0
+requests>=2.26.0
+winpcapy>=1.0.0
+win-inet-pton>=1.1.0

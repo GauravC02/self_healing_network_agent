@@ -1,0 +1,46 @@
+{
+    "episode_rewards": [
+        0
+    ],
+    "network_performance": [
+        0
+    ],
+    "healing_actions": [
+        []
+    ],
+    "training_losses": [],
+    "action_success_rate": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "best_reward": 0.0,
+    "best_performance": 0,
+    "current_avg_reward": 0.0,
+    "current_avg_performance": 0.0,
+    "action_success_rates": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ]
+}
