@@ -47,9 +47,14 @@ class MininetNetworkEnvironment:
     def step(self, action):
         """Execute one step in the environment"""
         prev_performance = self.simulator.calculate_network_performance()
+        prev_state = self.simulator.get_network_state_vector()
         
-        # Execute healing action
-        action_reward = self.actions[action]()
+        # Execute healing action and get immediate reward
+        try:
+            action_reward = self.actions[action]()
+        except Exception as e:
+            print(f"Error executing action {action}: {str(e)}")
+            action_reward = -5  # Penalty for failed action
         
         # Inject random failures (simulate dynamic network)
         if np.random.random() < 0.15:  # 15% chance of new failure
@@ -64,17 +69,24 @@ class MininetNetworkEnvironment:
         new_state = self.simulator.get_network_state_vector()
         new_performance = self.simulator.calculate_network_performance()
         
-        # Calculate reward
+        # Calculate reward components
         performance_improvement = new_performance - prev_performance
-        reward = action_reward + performance_improvement * 0.5
+        state_improvement = np.mean(new_state) - np.mean(prev_state)
         
-        # Bonus for maintaining high performance
+        # Combine rewards
+        reward = 0
+        reward += action_reward  # Immediate action reward
+        reward += performance_improvement * 2  # Performance improvement reward
+        reward += state_improvement * 1  # State improvement reward
+        
+        # Performance thresholds rewards
         if new_performance > 80:
-            reward += 10
+            reward += 5  # Bonus for high performance
+        elif new_performance < 30:
+            reward -= 5  # Penalty for very low performance
         
-        # Penalty for very low performance
-        if new_performance < 30:
-            reward -= 10
+        # Normalize reward to prevent extreme values
+        reward = np.clip(reward, -10, 10)
         
         self.current_step += 1
         done = self.current_step >= self.episode_length
@@ -82,7 +94,9 @@ class MininetNetworkEnvironment:
         info = {
             'performance': new_performance,
             'improvement': performance_improvement,
-            'baseline': self.baseline_performance
+            'baseline': self.baseline_performance,
+            'action_reward': action_reward,
+            'state_improvement': state_improvement
         }
         
         return new_state, reward, done, info
@@ -91,111 +105,129 @@ class MininetNetworkEnvironment:
         """Restart failed switches"""
         try:
             # Find failed switches and restart them
+            failed_switches = []
             for switch in self.simulator.switches:
                 # Check if switch is responding
-                result = subprocess.run(f"sudo ovs-ofctl show {switch.name}", 
-                                      shell=True, capture_output=True)
-                if result.returncode != 0:
-                    # Switch is failed, restart it
-                    switch.start(self.net.controllers)
-                    return 20
+                result = subprocess.run(["powershell", "-Command", f"Get-NetAdapter | Where-Object {{$_.Name -eq '{switch.name}'}}"], 
+                                      capture_output=True, text=True)
+                if "Disabled" in result.stdout or result.returncode != 0:
+                    failed_switches.append(switch)
+                    # Enable the network adapter
+                    subprocess.run(["powershell", "-Command", f"Enable-NetAdapter -Name '{switch.name}' -Confirm:$false"])
+            
+            if failed_switches:
+                return 5  # Reward for fixing failed switches
+            return 0  # No failed switches found
+        except Exception as e:
+            logging.error(f"Error in restart_failed_switch: {str(e)}")
+            return -2
+
+    def reroute_traffic(self):
+        """Reroute traffic to optimize network flow"""
+        try:
+            # Clear ARP cache
+            subprocess.run(["arp", "-d", "*"], capture_output=True)
+            
+            # Flush DNS cache
+            subprocess.run(["ipconfig", "/flushdns"], capture_output=True)
+            
+            # Reset network interfaces
+            subprocess.run(["netsh", "interface", "ip", "delete", "destinationcache"], capture_output=True)
+            
+            return 3
+        except Exception as e:
+            logging.error(f"Error in reroute_traffic: {str(e)}")
+            return -2
+
+    def adjust_link_bandwidth(self):
+        """Adjust link bandwidth settings"""
+        try:
+            # Get network interfaces
+            result = subprocess.run(["powershell", "-Command", "Get-NetAdapter | Where-Object {$_.Status -eq 'Up'}"], 
+                                  capture_output=True, text=True)
+            
+            if result.returncode == 0:
+                # Reset network adapter settings
+                subprocess.run(["powershell", "-Command", "Get-NetAdapter | Where-Object {$_.Status -eq 'Up'} | Set-NetAdapterAdvancedProperty -DisplayName 'Speed & Duplex' -DisplayValue 'Auto Negotiation'"])
+                return 2
             return 0
         except Exception as e:
-            print(f"Switch restart error: {e}")
-            return -5
-    
-    def reroute_traffic(self):
-        """Implement traffic rerouting using OpenFlow"""
-        try:
-            # Install backup flows for better path diversity
-            switches = ['s1', 's2', 's3', 's4']
-            for switch in switches:
-                # Add flow for alternate path
-                cmd = f"sudo ovs-ofctl -O OpenFlow13 add-flow {switch} " \
-                      f"priority=100,ip,nw_dst=10.0.1.0/24,actions=output:2"
-                subprocess.run(cmd, shell=True)
-            return 15
-        except Exception as e:
-            print(f"Rerouting error: {e}")
-            return -3
-    
-    def adjust_link_bandwidth(self):
-        """Adjust link bandwidth to reduce congestion"""
-        try:
-            # Use traffic control to manage bandwidth
-            links = ['s1-eth1', 's2-eth1', 's3-eth1']
-            for link in links:
-                # Remove existing qdisc and add new one
-                subprocess.run(f"sudo tc qdisc del dev {link} root", shell=True)
-                subprocess.run(f"sudo tc qdisc add dev {link} root handle 1: htb default 30", shell=True)
-                subprocess.run(f"sudo tc class add dev {link} parent 1: classid 1:1 htb rate 100mbit", shell=True)
-            return 12
-        except Exception as e:
-            print(f"Bandwidth adjustment error: {e}")
+            logging.error(f"Error in adjust_link_bandwidth: {str(e)}")
             return -2
-    
+
     def restart_host_service(self):
-        """Restart services on hosts"""
+        """Restart network-related services"""
         try:
-            # Restart network services on hosts
-            hosts = ['web1', 'web2', 'db1']
-            for host_name in hosts:
-                host = self.net.get(host_name)
-                if host:
-                    host.cmd('sudo systemctl restart networking')
-            return 10
-        except Exception as e:
-            print(f"Service restart error: {e}")
-            return -2
-    
-    def clear_flow_tables(self):
-        """Clear and rebuild flow tables"""
-        try:
-            for switch in self.simulator.switches:
-                # Clear existing flows
-                subprocess.run(f"sudo ovs-ofctl del-flows {switch.name}", shell=True)
-                # Let controller reinstall basic flows
-                time.sleep(2)
-            return 8
-        except Exception as e:
-            print(f"Flow table clear error: {e}")
-            return -3
-    
-    def load_balance_traffic(self):
-        """Implement simple load balancing"""
-        try:
-            # Add group table entries for load balancing
-            cmd = "sudo ovs-ofctl -O OpenFlow13 add-group s1 " \
-                  "group_id=1,type=select,bucket=output:2,bucket=output:3"
-            subprocess.run(cmd, shell=True)
+            services = [
+                "DNS",
+                "Dhcp",
+                "NlaSvc",  # Network Location Awareness
+                "nsi"      # Network Store Interface Service
+            ]
             
-            # Add flow to use group table
-            cmd = "sudo ovs-ofctl -O OpenFlow13 add-flow s1 " \
-                  "priority=200,ip,nw_dst=10.0.1.0/24,actions=group:1"
-            subprocess.run(cmd, shell=True)
-            return 18
+            for service in services:
+                # Restart each service
+                subprocess.run(["powershell", "-Command", f"Restart-Service -Name {service} -Force"], capture_output=True)
+            
+            return 2
         except Exception as e:
-            print(f"Load balancing error: {e}")
+            logging.error(f"Error in restart_host_service: {str(e)}")
             return -2
-    
-    def reduce_packet_loss(self):
-        """Reduce packet loss by adjusting queue parameters"""
+
+    def clear_flow_tables(self):
+        """Clear network flow tables and caches"""
         try:
-            # Adjust queue lengths and parameters
-            interfaces = ['s1-eth1', 's1-eth2', 's2-eth1', 's2-eth2']
-            for iface in interfaces:
-                # Remove existing packet loss
-                subprocess.run(f"sudo tc qdisc del dev {iface} root", shell=True)
-                # Add optimized qdisc
-                subprocess.run(f"sudo tc qdisc add dev {iface} root fq_codel", shell=True)
-            return 14
+            # Reset TCP/IP stack
+            subprocess.run(["netsh", "int", "ip", "reset"], capture_output=True)
+            subprocess.run(["netsh", "int", "ipv4", "reset"], capture_output=True)
+            subprocess.run(["netsh", "int", "ipv6", "reset"], capture_output=True)
+            
+            # Reset Winsock catalog
+            subprocess.run(["netsh", "winsock", "reset"], capture_output=True)
+            
+            return 3
         except Exception as e:
-            print(f"Packet loss reduction error: {e}")
-            return -1
-    
+            logging.error(f"Error in clear_flow_tables: {str(e)}")
+            return -2
+    def load_balance_traffic(self):
+        """Load balance network traffic across available interfaces"""
+        try:
+            # Get active network interfaces
+            result = subprocess.run(["powershell", "-Command", "Get-NetAdapter | Where-Object {$_.Status -eq 'Up'}"], 
+                                  capture_output=True, text=True)
+            
+            if result.returncode == 0:
+                # Reset interface metrics to auto
+                subprocess.run(["powershell", "-Command", "Get-NetIPInterface | Set-NetIPInterface -AutomaticMetric Enabled"])
+                
+                # Enable RSS (Receive Side Scaling) on supported adapters
+                subprocess.run(["powershell", "-Command", "Get-NetAdapter | Where-Object {$_.Status -eq 'Up'} | Set-NetAdapterRss -Enabled $True"])
+                
+                return 4
+            return 0
+        except Exception as e:
+            logging.error(f"Error in load_balance_traffic: {str(e)}")
+            return -2
+
+    def reduce_packet_loss(self):
+        """Implement measures to reduce packet loss"""
+        try:
+            # Optimize TCP parameters
+            subprocess.run(["netsh", "int", "tcp", "set", "global", "autotuninglevel=normal"], capture_output=True)
+            subprocess.run(["netsh", "int", "tcp", "set", "global", "chimney=disabled"], capture_output=True)
+            subprocess.run(["netsh", "int", "tcp", "set", "global", "rss=enabled"], capture_output=True)
+            
+            # Clear DNS cache
+            subprocess.run(["ipconfig", "/flushdns"], capture_output=True)
+            
+            return 3
+        except Exception as e:
+            logging.error(f"Error in reduce_packet_loss: {str(e)}")
+            return -2
+
     def do_nothing(self):
-        """No action - sometimes the best choice"""
-        return -1
+        """No action taken"""
+        return 0
     
     def cleanup(self):
         """Cleanup network resources"""

@@ -1,0 +1,1400 @@
+2025-06-30 15:40:56,743 - INFO - Starting training process
+2025-06-30 15:40:56,749 - INFO - Discovered network interfaces: ['{6C297358-0FBC-4019-AE32-5427BDF0E2FD}', '{1784694A-3FE2-4262-A3FD-DA4BB600B57E}', '{67944BCC-B869-4E92-9BCB-EB69B633EE33}', '{C45F04FE-14E6-4FBA-9ED3-3C1BCC100FD5}', '{A2B8B458-55FE-11EB-A2E1-806E6F6E6963}']
+2025-06-30 15:40:56,783 - INFO - Network monitoring started
+2025-06-30 15:41:00,740 - INFO - 
+Starting episode 1/1000
+2025-06-30 15:41:00,892 - INFO - Network monitoring stopped
+2025-06-30 15:41:00,899 - INFO - Discovered network interfaces: ['{6C297358-0FBC-4019-AE32-5427BDF0E2FD}', '{1784694A-3FE2-4262-A3FD-DA4BB600B57E}', '{67944BCC-B869-4E92-9BCB-EB69B633EE33}', '{C45F04FE-14E6-4FBA-9ED3-3C1BCC100FD5}', '{A2B8B458-55FE-11EB-A2E1-806E6F6E6963}']
+2025-06-30 15:41:00,947 - INFO - Network monitoring started
+2025-06-30 15:41:04,747 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:41:05,748 - INFO - Step 1: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:07,447 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:41:08,448 - INFO - Step 2: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:08,548 - INFO - Cache clearing completed
+2025-06-30 15:41:09,548 - INFO - Step 3: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:09,745 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:41:10,745 - INFO - Step 4: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:10,821 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:41:11,822 - INFO - Step 5: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:11,869 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:41:12,870 - INFO - Step 6: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:12,899 - INFO - DNS flush completed
+2025-06-30 15:41:13,900 - INFO - Step 7: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:13,928 - INFO - DNS flush completed
+2025-06-30 15:41:14,929 - INFO - Step 8: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:14,998 - INFO - Cache clearing completed
+2025-06-30 15:41:15,998 - INFO - Step 9: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:16,020 - INFO - DNS flush completed
+2025-06-30 15:41:17,021 - INFO - Step 10: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:17,091 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:41:18,093 - INFO - Step 11: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:18,117 - INFO - DNS flush completed
+2025-06-30 15:41:19,117 - INFO - Step 12: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:19,191 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:41:20,193 - INFO - Step 13: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:21,806 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:41:22,807 - INFO - Step 14: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:22,859 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:41:23,860 - INFO - Step 15: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:24,861 - INFO - Step 16: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:25,862 - INFO - Step 17: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:26,056 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:41:27,057 - INFO - Step 18: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:27,220 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:41:28,221 - INFO - Step 19: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:28,272 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:41:29,273 - INFO - Step 20: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:29,323 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:41:30,324 - INFO - Step 21: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:30,488 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:41:31,488 - INFO - Step 22: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:32,998 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:41:33,999 - INFO - Step 23: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:35,936 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:41:36,937 - INFO - Step 24: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:37,011 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:41:38,012 - INFO - Step 25: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:38,180 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:41:39,181 - INFO - Step 26: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:39,205 - INFO - DNS flush completed
+2025-06-30 15:41:40,206 - INFO - Step 27: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:40,375 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:41:41,376 - INFO - Step 28: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:41,436 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:41:42,437 - INFO - Step 29: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:42,479 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:41:43,480 - INFO - Step 30: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:45,478 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:41:46,480 - INFO - Step 31: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:47,480 - INFO - Step 32: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:47,523 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:41:48,524 - INFO - Step 33: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:48,701 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:41:49,701 - INFO - Step 34: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:49,989 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:41:50,990 - INFO - Step 35: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:51,161 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:41:52,177 - INFO - Step 36: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:52,232 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:41:53,233 - INFO - Step 37: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:53,285 - INFO - Cache clearing completed
+2025-06-30 15:41:54,286 - INFO - Step 38: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:54,314 - INFO - DNS flush completed
+2025-06-30 15:41:55,314 - INFO - Step 39: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:56,315 - INFO - Step 40: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:56,364 - INFO - Cache clearing completed
+2025-06-30 15:41:57,364 - INFO - Step 41: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:41:57,423 - INFO - Cache clearing completed
+2025-06-30 15:41:58,425 - INFO - Step 42: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:00,422 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:42:01,437 - INFO - Step 43: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:03,442 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:42:04,443 - INFO - Step 44: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:07,000 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:42:08,002 - INFO - Step 45: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:09,002 - INFO - Step 46: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:09,171 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:42:10,172 - INFO - Step 47: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:10,346 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:42:11,348 - INFO - Step 48: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:11,501 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:42:12,504 - INFO - Step 49: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:12,638 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:42:13,638 - INFO - Step 50: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:13,645 - INFO - Model saved to models\best_model.pth
+2025-06-30 15:42:13,646 - INFO - New best model saved with average reward: 0.00
+2025-06-30 15:42:13,648 - INFO - Model saved to models\checkpoint_episode_0.pth
+2025-06-30 15:42:13,650 - INFO - Checkpoint saved at episode 0
+2025-06-30 15:42:13,651 - INFO - Episode 1 Summary:
+2025-06-30 15:42:13,652 - INFO - Total Reward: 0.00
+2025-06-30 15:42:13,652 - INFO - Final Performance: 0.00%
+2025-06-30 15:42:13,652 - INFO - Epsilon: 1.0000
+2025-06-30 15:42:13,652 - INFO - 
+Starting episode 2/1000
+2025-06-30 15:42:13,839 - INFO - Network monitoring stopped
+2025-06-30 15:42:13,843 - INFO - Discovered network interfaces: ['{6C297358-0FBC-4019-AE32-5427BDF0E2FD}', '{1784694A-3FE2-4262-A3FD-DA4BB600B57E}', '{67944BCC-B869-4E92-9BCB-EB69B633EE33}', '{C45F04FE-14E6-4FBA-9ED3-3C1BCC100FD5}', '{A2B8B458-55FE-11EB-A2E1-806E6F6E6963}']
+2025-06-30 15:42:13,879 - INFO - Network monitoring started
+2025-06-30 15:42:15,909 - INFO - Step 1: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:21,705 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:42:22,706 - INFO - Step 2: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:22,775 - INFO - Cache clearing completed
+2025-06-30 15:42:23,776 - INFO - Step 3: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:24,794 - INFO - Step 4: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:25,795 - INFO - Step 5: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:25,994 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:42:26,995 - INFO - Step 6: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:27,046 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:42:28,047 - INFO - Step 7: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:29,700 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:42:30,702 - INFO - Step 8: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:34,568 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:42:35,570 - INFO - Step 9: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:35,767 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:42:36,768 - INFO - Step 10: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:36,813 - INFO - Cache clearing completed
+2025-06-30 15:42:37,814 - INFO - Step 11: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:37,970 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:42:38,971 - INFO - Step 12: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:38,992 - INFO - DNS flush completed
+2025-06-30 15:42:39,993 - INFO - Step 13: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:42,806 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:42:43,817 - INFO - Step 14: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:46,894 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:42:47,899 - INFO - Step 15: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:47,973 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:42:48,977 - INFO - Step 16: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:49,049 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:42:50,054 - INFO - Step 17: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:50,134 - INFO - Cache clearing completed
+2025-06-30 15:42:51,159 - INFO - Step 18: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:52,181 - INFO - Step 19: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:52,253 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:42:53,257 - INFO - Step 20: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:54,924 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:42:55,929 - INFO - Step 21: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:56,011 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:42:57,015 - INFO - Step 22: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:58,630 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:42:59,634 - INFO - Step 23: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:42:59,665 - INFO - DNS flush completed
+2025-06-30 15:43:00,669 - INFO - Step 24: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:00,728 - INFO - Cache clearing completed
+2025-06-30 15:43:01,732 - INFO - Step 25: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:02,735 - INFO - Step 26: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:02,805 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:43:03,810 - INFO - Step 27: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:03,840 - INFO - DNS flush completed
+2025-06-30 15:43:04,844 - INFO - Step 28: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:04,919 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:43:05,925 - INFO - Step 29: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:06,011 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:43:07,015 - INFO - Step 30: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:07,069 - INFO - Cache clearing completed
+2025-06-30 15:43:08,074 - INFO - Step 31: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:09,079 - INFO - Step 32: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:10,084 - INFO - Step 33: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:11,826 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:43:12,831 - INFO - Step 34: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:14,554 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:43:15,559 - INFO - Step 35: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:17,369 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:43:18,374 - INFO - Step 36: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:18,404 - INFO - DNS flush completed
+2025-06-30 15:43:19,409 - INFO - Step 37: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:19,467 - INFO - Cache clearing completed
+2025-06-30 15:43:20,471 - INFO - Step 38: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:20,540 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:43:21,544 - INFO - Step 39: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:21,593 - INFO - Cache clearing completed
+2025-06-30 15:43:22,598 - INFO - Step 40: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:26,277 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:43:27,283 - INFO - Step 41: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:30,859 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:43:31,863 - INFO - Step 42: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:32,032 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:43:33,036 - INFO - Step 43: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:35,240 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:43:36,245 - INFO - Step 44: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:36,325 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:43:37,329 - INFO - Step 45: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:37,381 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:43:38,391 - INFO - Step 46: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:38,579 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:43:39,584 - INFO - Step 47: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:42,854 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:43:43,859 - INFO - Step 48: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:47,756 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:43:48,768 - INFO - Step 49: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:50,928 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:43:51,957 - INFO - Step 50: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:51,958 - INFO - Episode 2 Summary:
+2025-06-30 15:43:51,958 - INFO - Total Reward: 0.00
+2025-06-30 15:43:51,959 - INFO - Average Loss: 0.0009
+2025-06-30 15:43:51,959 - INFO - Final Performance: 0.00%
+2025-06-30 15:43:51,959 - INFO - Epsilon: 0.8307
+2025-06-30 15:43:51,959 - INFO - 
+Starting episode 3/1000
+2025-06-30 15:43:52,955 - INFO - Network monitoring stopped
+2025-06-30 15:43:52,963 - INFO - Discovered network interfaces: ['{6C297358-0FBC-4019-AE32-5427BDF0E2FD}', '{1784694A-3FE2-4262-A3FD-DA4BB600B57E}', '{67944BCC-B869-4E92-9BCB-EB69B633EE33}', '{C45F04FE-14E6-4FBA-9ED3-3C1BCC100FD5}', '{A2B8B458-55FE-11EB-A2E1-806E6F6E6963}']
+2025-06-30 15:43:53,026 - INFO - Network monitoring started
+2025-06-30 15:43:54,064 - INFO - DNS flush completed
+2025-06-30 15:43:55,094 - INFO - Step 1: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:56,118 - INFO - Step 2: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:57,140 - INFO - Step 3: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:57,168 - INFO - DNS flush completed
+2025-06-30 15:43:58,171 - INFO - Step 4: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:43:59,736 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:44:00,740 - INFO - Step 5: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:04,640 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:44:05,646 - INFO - Step 6: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:05,724 - INFO - Cache clearing completed
+2025-06-30 15:44:06,729 - INFO - Step 7: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:06,790 - INFO - Cache clearing completed
+2025-06-30 15:44:07,794 - INFO - Step 8: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:07,867 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:44:08,871 - INFO - Step 9: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:10,767 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:44:11,772 - INFO - Step 10: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:11,953 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:44:12,956 - INFO - Step 11: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:13,026 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:44:14,030 - INFO - Step 12: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:14,098 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:44:15,103 - INFO - Step 13: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:15,160 - INFO - Cache clearing completed
+2025-06-30 15:44:16,165 - INFO - Step 14: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:19,311 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:44:20,315 - INFO - Step 15: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:20,340 - INFO - DNS flush completed
+2025-06-30 15:44:21,345 - INFO - Step 16: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:21,523 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:44:22,528 - INFO - Step 17: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:25,756 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:44:26,760 - INFO - Step 18: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:26,943 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:44:27,947 - INFO - Step 19: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:28,950 - INFO - Step 20: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:29,125 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:44:30,160 - INFO - Step 21: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:30,215 - INFO - Cache clearing completed
+2025-06-30 15:44:31,220 - INFO - Step 22: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:31,253 - INFO - DNS flush completed
+2025-06-30 15:44:32,259 - INFO - Step 23: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:32,287 - INFO - DNS flush completed
+2025-06-30 15:44:33,292 - INFO - Step 24: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:33,355 - INFO - Cache clearing completed
+2025-06-30 15:44:34,362 - INFO - Step 25: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:34,445 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:44:35,450 - INFO - Step 26: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:35,478 - INFO - DNS flush completed
+2025-06-30 15:44:36,482 - INFO - Step 27: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:36,529 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:44:37,535 - INFO - Step 28: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:37,594 - INFO - Cache clearing completed
+2025-06-30 15:44:38,597 - INFO - Step 29: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:38,650 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:44:39,655 - INFO - Step 30: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:39,842 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:44:40,846 - INFO - Step 31: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:40,898 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:44:41,902 - INFO - Step 32: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:42,081 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:44:43,086 - INFO - Step 33: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:44,091 - INFO - Step 34: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:45,101 - INFO - Step 35: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:46,993 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:44:47,998 - INFO - Step 36: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:48,050 - INFO - Cache clearing completed
+2025-06-30 15:44:49,056 - INFO - Step 37: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:49,083 - INFO - DNS flush completed
+2025-06-30 15:44:50,087 - INFO - Step 38: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:50,290 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:44:51,295 - INFO - Step 39: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:51,363 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:44:52,367 - INFO - Step 40: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:52,548 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:44:53,552 - INFO - Step 41: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:53,604 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:44:54,610 - INFO - Step 42: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:55,614 - INFO - Step 43: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:55,645 - INFO - DNS flush completed
+2025-06-30 15:44:56,650 - INFO - Step 44: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:56,707 - INFO - Cache clearing completed
+2025-06-30 15:44:57,712 - INFO - Step 45: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:57,792 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:44:58,797 - INFO - Step 46: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:59,801 - INFO - Step 47: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:44:59,827 - INFO - DNS flush completed
+2025-06-30 15:45:00,831 - INFO - Step 48: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:00,887 - INFO - Cache clearing completed
+2025-06-30 15:45:01,891 - INFO - Step 49: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:02,896 - INFO - Step 50: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:02,896 - INFO - Episode 3 Summary:
+2025-06-30 15:45:02,896 - INFO - Total Reward: 0.00
+2025-06-30 15:45:02,896 - INFO - Average Loss: 0.0004
+2025-06-30 15:45:02,896 - INFO - Final Performance: 0.00%
+2025-06-30 15:45:02,896 - INFO - Epsilon: 0.6466
+2025-06-30 15:45:02,897 - INFO - 
+Starting episode 4/1000
+2025-06-30 15:45:02,982 - INFO - Network monitoring stopped
+2025-06-30 15:45:02,988 - INFO - Discovered network interfaces: ['{6C297358-0FBC-4019-AE32-5427BDF0E2FD}', '{1784694A-3FE2-4262-A3FD-DA4BB600B57E}', '{67944BCC-B869-4E92-9BCB-EB69B633EE33}', '{C45F04FE-14E6-4FBA-9ED3-3C1BCC100FD5}', '{A2B8B458-55FE-11EB-A2E1-806E6F6E6963}']
+2025-06-30 15:45:03,032 - INFO - Network monitoring started
+2025-06-30 15:45:04,089 - INFO - DNS flush completed
+2025-06-30 15:45:05,110 - INFO - Step 1: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:05,235 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:45:06,241 - INFO - Step 2: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:06,308 - INFO - Cache clearing completed
+2025-06-30 15:45:07,312 - INFO - Step 3: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:07,369 - INFO - Cache clearing completed
+2025-06-30 15:45:08,373 - INFO - Step 4: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:10,092 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:45:11,096 - INFO - Step 5: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:12,865 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:45:13,869 - INFO - Step 6: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:13,895 - INFO - DNS flush completed
+2025-06-30 15:45:14,901 - INFO - Step 7: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:18,397 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:45:19,403 - INFO - Step 8: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:19,486 - INFO - Cache clearing completed
+2025-06-30 15:45:20,515 - INFO - Step 9: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:23,580 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:45:24,625 - INFO - Step 10: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:24,702 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:45:25,709 - INFO - Step 11: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:26,010 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:45:27,018 - INFO - Step 12: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:31,130 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:45:32,134 - INFO - Step 13: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:32,333 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:45:33,343 - INFO - Step 14: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:33,584 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:45:34,593 - INFO - Step 15: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:35,217 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:45:36,326 - INFO - Step 16: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:37,345 - INFO - Step 17: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:38,392 - INFO - Step 18: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:38,519 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:45:39,550 - INFO - Step 19: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:40,630 - INFO - Step 20: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:40,704 - INFO - DNS flush completed
+2025-06-30 15:45:41,734 - INFO - Step 21: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:41,789 - INFO - DNS flush completed
+2025-06-30 15:45:42,800 - INFO - Step 22: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:42,911 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:45:43,920 - INFO - Step 23: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:48,034 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:45:49,039 - INFO - Step 24: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:50,971 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:45:51,975 - INFO - Step 25: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:52,002 - INFO - DNS flush completed
+2025-06-30 15:45:53,007 - INFO - Step 26: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:53,216 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:45:54,221 - INFO - Step 27: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:54,297 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:45:55,302 - INFO - Step 28: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:55,385 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:45:56,412 - INFO - Step 29: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:56,467 - INFO - Cache clearing completed
+2025-06-30 15:45:57,472 - INFO - Step 30: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:57,650 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:45:58,654 - INFO - Step 31: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:58,678 - INFO - DNS flush completed
+2025-06-30 15:45:59,683 - INFO - Step 32: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:45:59,712 - INFO - DNS flush completed
+2025-06-30 15:46:00,716 - INFO - Step 33: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:00,903 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:46:01,907 - INFO - Step 34: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:02,912 - INFO - Step 35: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:02,966 - INFO - Cache clearing completed
+2025-06-30 15:46:03,971 - INFO - Step 36: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:04,045 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:46:05,052 - INFO - Step 37: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:05,115 - INFO - Cache clearing completed
+2025-06-30 15:46:06,119 - INFO - Step 38: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:06,180 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:46:07,185 - INFO - Step 39: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:07,214 - INFO - DNS flush completed
+2025-06-30 15:46:08,219 - INFO - Step 40: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:08,289 - INFO - DNS flush completed
+2025-06-30 15:46:09,296 - INFO - Step 41: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:09,496 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:46:10,501 - INFO - Step 42: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:10,585 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:46:11,590 - INFO - Step 43: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:11,638 - INFO - Cache clearing completed
+2025-06-30 15:46:12,645 - INFO - Step 44: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:12,709 - INFO - Cache clearing completed
+2025-06-30 15:46:13,714 - INFO - Step 45: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:13,773 - INFO - Cache clearing completed
+2025-06-30 15:46:14,779 - INFO - Step 46: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:14,842 - INFO - Cache clearing completed
+2025-06-30 15:46:15,846 - INFO - Step 47: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:15,918 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:46:16,947 - INFO - Step 48: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:17,001 - INFO - Cache clearing completed
+2025-06-30 15:46:18,006 - INFO - Step 49: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:18,076 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:46:19,080 - INFO - Step 50: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:19,080 - INFO - Episode 4 Summary:
+2025-06-30 15:46:19,080 - INFO - Total Reward: 0.00
+2025-06-30 15:46:19,081 - INFO - Average Loss: 0.0004
+2025-06-30 15:46:19,081 - INFO - Final Performance: 0.00%
+2025-06-30 15:46:19,081 - INFO - Epsilon: 0.5032
+2025-06-30 15:46:19,081 - INFO - 
+Starting episode 5/1000
+2025-06-30 15:46:20,037 - INFO - Network monitoring stopped
+2025-06-30 15:46:20,042 - INFO - Discovered network interfaces: ['{6C297358-0FBC-4019-AE32-5427BDF0E2FD}', '{1784694A-3FE2-4262-A3FD-DA4BB600B57E}', '{67944BCC-B869-4E92-9BCB-EB69B633EE33}', '{C45F04FE-14E6-4FBA-9ED3-3C1BCC100FD5}', '{A2B8B458-55FE-11EB-A2E1-806E6F6E6963}']
+2025-06-30 15:46:20,074 - INFO - Network monitoring started
+2025-06-30 15:46:22,632 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:46:23,637 - INFO - Step 1: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:23,716 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:46:24,724 - INFO - Step 2: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:24,827 - INFO - Cache clearing completed
+2025-06-30 15:46:25,832 - INFO - Step 3: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:25,899 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:46:26,906 - INFO - Step 4: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:27,910 - INFO - Step 5: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:27,960 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:46:28,964 - INFO - Step 6: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:29,153 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:46:30,156 - INFO - Step 7: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:33,043 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:46:34,048 - INFO - Step 8: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:34,098 - INFO - Cache clearing completed
+2025-06-30 15:46:35,101 - INFO - Step 9: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:35,158 - INFO - Cache clearing completed
+2025-06-30 15:46:36,164 - INFO - Step 10: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:36,232 - INFO - Cache clearing completed
+2025-06-30 15:46:37,236 - INFO - Step 11: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:37,309 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:46:38,312 - INFO - Step 12: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:41,187 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:46:42,191 - INFO - Step 13: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:42,364 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:46:43,367 - INFO - Step 14: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:43,536 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:46:44,540 - INFO - Step 15: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:44,659 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:46:45,665 - INFO - Step 16: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:45,762 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:46:46,767 - INFO - Step 17: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:47,772 - INFO - Step 18: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:48,776 - INFO - Step 19: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:49,781 - INFO - Step 20: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:49,967 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:46:50,992 - INFO - Step 21: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:51,049 - INFO - Cache clearing completed
+2025-06-30 15:46:52,053 - INFO - Step 22: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:52,105 - INFO - Cache clearing completed
+2025-06-30 15:46:53,109 - INFO - Step 23: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:53,288 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:46:54,292 - INFO - Step 24: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:54,340 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:46:55,344 - INFO - Step 25: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:55,413 - INFO - Cache clearing completed
+2025-06-30 15:46:56,417 - INFO - Step 26: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:56,443 - INFO - DNS flush completed
+2025-06-30 15:46:57,447 - INFO - Step 27: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:57,471 - INFO - DNS flush completed
+2025-06-30 15:46:58,476 - INFO - Step 28: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:58,527 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:46:59,532 - INFO - Step 29: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:46:59,696 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:47:00,702 - INFO - Step 30: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:00,823 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:47:01,828 - INFO - Step 31: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:01,880 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:47:02,886 - INFO - Step 32: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:02,939 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:47:03,943 - INFO - Step 33: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:03,996 - INFO - Cache clearing completed
+2025-06-30 15:47:05,002 - INFO - Step 34: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:05,077 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:47:06,081 - INFO - Step 35: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:09,168 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:47:10,172 - INFO - Step 36: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:10,223 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:47:11,228 - INFO - Step 37: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:12,232 - INFO - Step 38: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:12,256 - INFO - DNS flush completed
+2025-06-30 15:47:13,261 - INFO - Step 39: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:13,286 - INFO - DNS flush completed
+2025-06-30 15:47:14,290 - INFO - Step 40: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:14,314 - INFO - DNS flush completed
+2025-06-30 15:47:15,320 - INFO - Step 41: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:15,345 - INFO - DNS flush completed
+2025-06-30 15:47:16,350 - INFO - Step 42: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:18,164 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:47:19,168 - INFO - Step 43: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:19,193 - INFO - DNS flush completed
+2025-06-30 15:47:20,197 - INFO - Step 44: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:20,249 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:47:21,253 - INFO - Step 45: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:24,749 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:47:25,755 - INFO - Step 46: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:25,814 - INFO - Cache clearing completed
+2025-06-30 15:47:26,820 - INFO - Step 47: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:26,901 - INFO - Cache clearing completed
+2025-06-30 15:47:27,927 - INFO - Step 48: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:27,984 - INFO - Cache clearing completed
+2025-06-30 15:47:28,988 - INFO - Step 49: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:29,154 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:47:30,157 - INFO - Step 50: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:30,158 - INFO - Episode 5 Summary:
+2025-06-30 15:47:30,158 - INFO - Total Reward: 0.00
+2025-06-30 15:47:30,158 - INFO - Average Loss: 0.0007
+2025-06-30 15:47:30,158 - INFO - Final Performance: 0.00%
+2025-06-30 15:47:30,158 - INFO - Epsilon: 0.3917
+2025-06-30 15:47:30,158 - INFO - 
+Starting episode 6/1000
+2025-06-30 15:47:30,970 - INFO - Network monitoring stopped
+2025-06-30 15:47:30,977 - INFO - Discovered network interfaces: ['{6C297358-0FBC-4019-AE32-5427BDF0E2FD}', '{1784694A-3FE2-4262-A3FD-DA4BB600B57E}', '{67944BCC-B869-4E92-9BCB-EB69B633EE33}', '{C45F04FE-14E6-4FBA-9ED3-3C1BCC100FD5}', '{A2B8B458-55FE-11EB-A2E1-806E6F6E6963}']
+2025-06-30 15:47:31,016 - INFO - Network monitoring started
+2025-06-30 15:47:32,096 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:47:33,101 - INFO - Step 1: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:33,270 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:47:34,274 - INFO - Step 2: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:34,476 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:47:35,483 - INFO - Step 3: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:35,690 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:47:36,694 - INFO - Step 4: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:36,721 - INFO - DNS flush completed
+2025-06-30 15:47:37,743 - INFO - Step 5: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:37,772 - INFO - DNS flush completed
+2025-06-30 15:47:38,776 - INFO - Step 6: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:38,825 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:47:39,830 - INFO - Step 7: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:42,841 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:47:43,845 - INFO - Step 8: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:43,897 - INFO - Cache clearing completed
+2025-06-30 15:47:44,902 - INFO - Step 9: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:45,906 - INFO - Step 10: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:45,958 - INFO - Cache clearing completed
+2025-06-30 15:47:46,962 - INFO - Step 11: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:48,678 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:47:49,681 - INFO - Step 12: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:51,271 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:47:52,277 - INFO - Step 13: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:54,180 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:47:55,192 - INFO - Step 14: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:55,240 - INFO - DNS flush completed
+2025-06-30 15:47:56,245 - INFO - Step 15: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:56,269 - INFO - DNS flush completed
+2025-06-30 15:47:57,274 - INFO - Step 16: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:57,306 - INFO - DNS flush completed
+2025-06-30 15:47:58,313 - INFO - Step 17: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:58,358 - INFO - DNS flush completed
+2025-06-30 15:47:59,362 - INFO - Step 18: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:47:59,389 - INFO - DNS flush completed
+2025-06-30 15:48:00,393 - INFO - Step 19: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:00,420 - INFO - DNS flush completed
+2025-06-30 15:48:01,424 - INFO - Step 20: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:01,481 - INFO - Cache clearing completed
+2025-06-30 15:48:02,487 - INFO - Step 21: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:02,546 - INFO - Cache clearing completed
+2025-06-30 15:48:03,550 - INFO - Step 22: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:03,741 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:48:04,747 - INFO - Step 23: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:07,755 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:48:08,761 - INFO - Step 24: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:08,810 - INFO - Cache clearing completed
+2025-06-30 15:48:09,814 - INFO - Step 25: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:09,865 - INFO - Cache clearing completed
+2025-06-30 15:48:10,869 - INFO - Step 26: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:10,917 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:48:11,922 - INFO - Step 27: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:11,989 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:48:12,994 - INFO - Step 28: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:13,060 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:48:14,064 - INFO - Step 29: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:14,140 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:48:15,163 - INFO - Step 30: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:16,190 - INFO - Step 31: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:16,266 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:48:17,271 - INFO - Step 32: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:17,299 - INFO - DNS flush completed
+2025-06-30 15:48:18,304 - INFO - Step 33: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:19,310 - INFO - Step 34: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:19,385 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:48:20,390 - INFO - Step 35: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:20,447 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:48:21,453 - INFO - Step 36: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:22,458 - INFO - Step 37: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:25,640 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:48:26,644 - INFO - Step 38: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:29,902 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:48:30,912 - INFO - Step 39: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:31,917 - INFO - Step 40: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:31,985 - INFO - Cache clearing completed
+2025-06-30 15:48:32,989 - INFO - Step 41: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:33,994 - INFO - Step 42: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:34,059 - INFO - Cache clearing completed
+2025-06-30 15:48:35,064 - INFO - Step 43: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:35,091 - INFO - DNS flush completed
+2025-06-30 15:48:36,095 - INFO - Step 44: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:36,126 - INFO - DNS flush completed
+2025-06-30 15:48:37,132 - INFO - Step 45: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:37,160 - INFO - DNS flush completed
+2025-06-30 15:48:38,164 - INFO - Step 46: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:38,194 - INFO - DNS flush completed
+2025-06-30 15:48:39,199 - INFO - Step 47: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:39,256 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:48:40,260 - INFO - Step 48: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:43,209 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:48:44,213 - INFO - Step 49: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:44,267 - INFO - Cache clearing completed
+2025-06-30 15:48:45,272 - INFO - Step 50: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:45,272 - INFO - Episode 6 Summary:
+2025-06-30 15:48:45,273 - INFO - Total Reward: 0.00
+2025-06-30 15:48:45,273 - INFO - Average Loss: 0.0007
+2025-06-30 15:48:45,273 - INFO - Final Performance: 0.00%
+2025-06-30 15:48:45,273 - INFO - Epsilon: 0.3048
+2025-06-30 15:48:45,273 - INFO - 
+Starting episode 7/1000
+2025-06-30 15:48:45,923 - INFO - Network monitoring stopped
+2025-06-30 15:48:45,927 - INFO - Discovered network interfaces: ['{6C297358-0FBC-4019-AE32-5427BDF0E2FD}', '{1784694A-3FE2-4262-A3FD-DA4BB600B57E}', '{67944BCC-B869-4E92-9BCB-EB69B633EE33}', '{C45F04FE-14E6-4FBA-9ED3-3C1BCC100FD5}', '{A2B8B458-55FE-11EB-A2E1-806E6F6E6963}']
+2025-06-30 15:48:45,962 - INFO - Network monitoring started
+2025-06-30 15:48:49,998 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:48:51,003 - INFO - Step 1: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:51,202 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:48:52,206 - INFO - Step 2: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:52,263 - INFO - Cache clearing completed
+2025-06-30 15:48:53,267 - INFO - Step 3: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:53,322 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:48:54,328 - INFO - Step 4: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:54,382 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:48:55,388 - INFO - Step 5: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:55,453 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:48:56,458 - INFO - Step 6: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:56,522 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:48:57,528 - INFO - Step 7: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:48:57,577 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:48:58,583 - INFO - Step 8: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:00,572 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:49:01,579 - INFO - Step 9: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:03,729 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:49:04,737 - INFO - Step 10: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:04,974 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:49:05,978 - INFO - Step 11: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:06,181 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:49:07,188 - INFO - Step 12: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:07,415 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:49:08,421 - INFO - Step 13: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:08,606 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:49:09,611 - INFO - Step 14: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:12,752 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:49:13,781 - INFO - Step 15: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:13,834 - INFO - Cache clearing completed
+2025-06-30 15:49:14,908 - INFO - Step 16: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:15,915 - INFO - Step 17: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:16,046 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:49:17,063 - INFO - Step 18: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:17,110 - INFO - DNS flush completed
+2025-06-30 15:49:18,116 - INFO - Step 19: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:18,183 - INFO - Cache clearing completed
+2025-06-30 15:49:19,188 - INFO - Step 20: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:20,192 - INFO - Step 21: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:23,419 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:49:24,426 - INFO - Step 22: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:27,677 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:49:28,682 - INFO - Step 23: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:28,850 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:49:29,854 - INFO - Step 24: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:33,412 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:49:34,417 - INFO - Step 25: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:36,465 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:49:37,470 - INFO - Step 26: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:38,491 - INFO - Step 27: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:41,295 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:49:42,299 - INFO - Step 28: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:43,303 - INFO - Step 29: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:44,307 - INFO - Step 30: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:47,197 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:49:48,202 - INFO - Step 31: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:49,206 - INFO - Step 32: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:50,753 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:49:51,757 - INFO - Step 33: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:51,829 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:49:52,837 - INFO - Step 34: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:52,889 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:49:53,893 - INFO - Step 35: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:53,948 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:49:54,953 - INFO - Step 36: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:55,012 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:49:56,015 - INFO - Step 37: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:49:56,043 - INFO - DNS flush completed
+2025-06-30 15:49:57,050 - INFO - Step 38: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:00,770 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:50:01,777 - INFO - Step 39: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:05,778 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:50:06,783 - INFO - Step 40: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:11,109 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:50:12,116 - INFO - Step 41: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:13,120 - INFO - Step 42: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:13,281 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:50:14,286 - INFO - Step 43: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:16,132 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:50:17,137 - INFO - Step 44: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:18,706 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:50:19,711 - INFO - Step 45: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:21,402 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:50:22,406 - INFO - Step 46: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:22,454 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:50:23,458 - INFO - Step 47: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:23,513 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:50:24,521 - INFO - Step 48: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:24,582 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:50:25,587 - INFO - Step 49: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:25,659 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:50:26,664 - INFO - Step 50: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:26,664 - INFO - Episode 7 Summary:
+2025-06-30 15:50:26,665 - INFO - Total Reward: 0.00
+2025-06-30 15:50:26,665 - INFO - Average Loss: 0.0007
+2025-06-30 15:50:26,665 - INFO - Final Performance: 0.00%
+2025-06-30 15:50:26,665 - INFO - Epsilon: 0.2373
+2025-06-30 15:50:26,665 - INFO - 
+Starting episode 8/1000
+2025-06-30 15:50:26,861 - INFO - Network monitoring stopped
+2025-06-30 15:50:26,868 - INFO - Discovered network interfaces: ['{6C297358-0FBC-4019-AE32-5427BDF0E2FD}', '{1784694A-3FE2-4262-A3FD-DA4BB600B57E}', '{67944BCC-B869-4E92-9BCB-EB69B633EE33}', '{C45F04FE-14E6-4FBA-9ED3-3C1BCC100FD5}', '{A2B8B458-55FE-11EB-A2E1-806E6F6E6963}']
+2025-06-30 15:50:26,924 - INFO - Network monitoring started
+2025-06-30 15:50:28,041 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:50:29,045 - INFO - Step 1: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:30,766 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:50:31,771 - INFO - Step 2: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:31,828 - INFO - Cache clearing completed
+2025-06-30 15:50:32,834 - INFO - Step 3: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:32,908 - INFO - Cache clearing completed
+2025-06-30 15:50:33,912 - INFO - Step 4: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:33,962 - INFO - Cache clearing completed
+2025-06-30 15:50:34,966 - INFO - Step 5: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:35,042 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:50:36,046 - INFO - Step 6: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:36,098 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:50:37,103 - INFO - Step 7: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:37,156 - INFO - Cache clearing completed
+2025-06-30 15:50:38,161 - INFO - Step 8: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:38,261 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:50:39,277 - INFO - Step 9: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:42,140 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:50:43,145 - INFO - Step 10: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:46,262 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:50:47,267 - INFO - Step 11: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:50,005 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:50:51,009 - INFO - Step 12: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:53,789 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:50:54,802 - INFO - Step 13: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:58,307 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:50:59,312 - INFO - Step 14: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:50:59,362 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:51:00,366 - INFO - Step 15: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:01,370 - INFO - Step 16: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:01,421 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:51:02,426 - INFO - Step 17: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:03,430 - INFO - Step 18: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:04,435 - INFO - Step 19: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:04,491 - INFO - Cache clearing completed
+2025-06-30 15:51:05,496 - INFO - Step 20: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:05,522 - INFO - DNS flush completed
+2025-06-30 15:51:06,527 - INFO - Step 21: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:06,553 - INFO - DNS flush completed
+2025-06-30 15:51:07,557 - INFO - Step 22: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:07,583 - INFO - DNS flush completed
+2025-06-30 15:51:08,587 - INFO - Step 23: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:09,591 - INFO - Step 24: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:09,767 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:51:10,773 - INFO - Step 25: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:10,803 - INFO - DNS flush completed
+2025-06-30 15:51:11,810 - INFO - Step 26: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:15,520 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:51:16,526 - INFO - Step 27: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:19,794 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:51:20,798 - INFO - Step 28: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:20,981 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:51:21,985 - INFO - Step 29: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:24,802 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:51:25,807 - INFO - Step 30: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:25,887 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:51:26,893 - INFO - Step 31: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:26,962 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:51:27,966 - INFO - Step 32: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:28,035 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:51:29,041 - INFO - Step 33: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:29,134 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:51:30,139 - INFO - Step 34: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:30,209 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:51:31,213 - INFO - Step 35: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:31,303 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:51:32,307 - INFO - Step 36: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:32,377 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:51:33,382 - INFO - Step 37: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:33,435 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:51:34,440 - INFO - Step 38: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:34,466 - INFO - DNS flush completed
+2025-06-30 15:51:35,470 - INFO - Step 39: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:35,499 - INFO - DNS flush completed
+2025-06-30 15:51:36,503 - INFO - Step 40: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:36,529 - INFO - DNS flush completed
+2025-06-30 15:51:37,533 - INFO - Step 41: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:37,562 - INFO - DNS flush completed
+2025-06-30 15:51:38,566 - INFO - Step 42: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:38,589 - INFO - DNS flush completed
+2025-06-30 15:51:39,594 - INFO - Step 43: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:42,342 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:51:43,346 - INFO - Step 44: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:46,265 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:51:47,269 - INFO - Step 45: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:47,405 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:51:48,410 - INFO - Step 46: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:48,649 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:51:49,655 - INFO - Step 47: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:49,727 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:51:50,733 - INFO - Step 48: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:50,952 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:51:51,957 - INFO - Step 49: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:52,139 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:51:53,146 - INFO - Step 50: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:53,147 - INFO - Episode 8 Summary:
+2025-06-30 15:51:53,147 - INFO - Total Reward: 0.00
+2025-06-30 15:51:53,148 - INFO - Average Loss: 0.0007
+2025-06-30 15:51:53,148 - INFO - Final Performance: 0.00%
+2025-06-30 15:51:53,149 - INFO - Epsilon: 0.1847
+2025-06-30 15:51:53,149 - INFO - 
+Starting episode 9/1000
+2025-06-30 15:51:53,189 - INFO - Network monitoring stopped
+2025-06-30 15:51:53,196 - INFO - Discovered network interfaces: ['{6C297358-0FBC-4019-AE32-5427BDF0E2FD}', '{1784694A-3FE2-4262-A3FD-DA4BB600B57E}', '{67944BCC-B869-4E92-9BCB-EB69B633EE33}', '{C45F04FE-14E6-4FBA-9ED3-3C1BCC100FD5}', '{A2B8B458-55FE-11EB-A2E1-806E6F6E6963}']
+2025-06-30 15:51:53,233 - INFO - Network monitoring started
+2025-06-30 15:51:54,278 - INFO - DNS flush completed
+2025-06-30 15:51:55,306 - INFO - Step 1: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:57,060 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:51:58,065 - INFO - Step 2: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:51:59,615 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:52:00,620 - INFO - Step 3: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:02,111 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:52:03,116 - INFO - Step 4: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:04,854 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:52:05,862 - INFO - Step 5: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:05,889 - INFO - DNS flush completed
+2025-06-30 15:52:06,895 - INFO - Step 6: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:06,920 - INFO - DNS flush completed
+2025-06-30 15:52:07,924 - INFO - Step 7: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:07,993 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:52:08,997 - INFO - Step 8: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:12,029 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:52:13,034 - INFO - Step 9: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:14,039 - INFO - Step 10: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:14,218 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:52:15,222 - INFO - Step 11: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:15,282 - INFO - Cache clearing completed
+2025-06-30 15:52:16,287 - INFO - Step 12: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:16,315 - INFO - DNS flush completed
+2025-06-30 15:52:17,320 - INFO - Step 13: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:17,384 - INFO - Cache clearing completed
+2025-06-30 15:52:18,390 - INFO - Step 14: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:18,456 - INFO - Cache clearing completed
+2025-06-30 15:52:19,459 - INFO - Step 15: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:19,527 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:52:20,531 - INFO - Step 16: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:20,562 - INFO - DNS flush completed
+2025-06-30 15:52:21,567 - INFO - Step 17: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:21,594 - INFO - DNS flush completed
+2025-06-30 15:52:22,598 - INFO - Step 18: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:22,627 - INFO - DNS flush completed
+2025-06-30 15:52:23,630 - INFO - Step 19: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:27,145 - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-06-30 15:52:28,153 - INFO - Step 20: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:30,000 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:52:31,006 - INFO - Step 21: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:31,071 - INFO - Cache clearing completed
+2025-06-30 15:52:32,075 - INFO - Step 22: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:32,127 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:52:33,131 - INFO - Step 23: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:33,182 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:52:34,187 - INFO - Step 24: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:36,008 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:52:37,012 - INFO - Step 25: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:52:38,286 - INFO - 
+Training interrupted by user
+2025-06-30 15:52:38,290 - INFO - Model saved to models\final_model.pth
+2025-06-30 15:52:38,292 - INFO - 
+Training completed!
+2025-06-30 15:52:38,292 - INFO - Final model saved to: models\final_model.pth
+2025-06-30 15:52:38,292 - INFO - Final metrics saved to: models\final_metrics.json
+2025-06-30 15:52:38,467 - INFO - Network monitoring stopped
+2025-06-30 15:57:27,382 - INFO - Starting training process
+2025-06-30 15:57:27,387 - INFO - Discovered network interfaces: ['{6C297358-0FBC-4019-AE32-5427BDF0E2FD}', '{1784694A-3FE2-4262-A3FD-DA4BB600B57E}', '{67944BCC-B869-4E92-9BCB-EB69B633EE33}', '{C45F04FE-14E6-4FBA-9ED3-3C1BCC100FD5}', '{A2B8B458-55FE-11EB-A2E1-806E6F6E6963}']
+2025-06-30 15:57:27,423 - INFO - Network monitoring started
+2025-06-30 15:57:31,107 - INFO - 
+Starting episode 1/1000
+2025-06-30 15:57:31,500 - INFO - Network monitoring stopped
+2025-06-30 15:57:31,505 - INFO - Discovered network interfaces: ['{6C297358-0FBC-4019-AE32-5427BDF0E2FD}', '{1784694A-3FE2-4262-A3FD-DA4BB600B57E}', '{67944BCC-B869-4E92-9BCB-EB69B633EE33}', '{C45F04FE-14E6-4FBA-9ED3-3C1BCC100FD5}', '{A2B8B458-55FE-11EB-A2E1-806E6F6E6963}']
+2025-06-30 15:57:31,539 - INFO - Network monitoring started
+2025-06-30 15:57:32,636 - INFO - Cache clearing completed
+2025-06-30 15:57:33,637 - INFO - Step 1: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:57:36,788 - INFO - Load balancing completed
+2025-06-30 15:57:37,789 - INFO - Step 2: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:57:37,860 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:57:38,861 - INFO - Step 3: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:57:38,933 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:57:39,934 - INFO - Step 4: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:57:41,637 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:57:42,638 - INFO - Step 5: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:57:42,697 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:57:43,698 - INFO - Step 6: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:57:43,763 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:57:44,764 - INFO - Step 7: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:57:44,851 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:57:45,852 - INFO - Step 8: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:57:48,999 - INFO - Load balancing completed
+2025-06-30 15:57:50,019 - INFO - Step 9: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:57:51,954 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:57:52,956 - INFO - Step 10: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:57:53,005 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:57:54,007 - INFO - Step 11: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:57:55,007 - INFO - Step 12: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:57:55,059 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:57:56,060 - INFO - Step 13: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:57:57,667 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:57:58,667 - INFO - Step 14: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:57:58,768 - INFO - Cache clearing completed
+2025-06-30 15:57:59,769 - INFO - Step 15: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:57:59,829 - INFO - Cache clearing completed
+2025-06-30 15:58:00,830 - INFO - Step 16: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:00,855 - INFO - DNS flush completed
+2025-06-30 15:58:01,856 - INFO - Step 17: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:02,857 - INFO - Step 18: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:02,923 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:58:03,924 - INFO - Step 19: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:04,104 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:58:05,105 - INFO - Step 20: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:05,180 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:58:06,181 - INFO - Step 21: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:06,356 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:58:07,357 - INFO - Step 22: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:07,514 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:58:08,515 - INFO - Step 23: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:08,558 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:58:09,559 - INFO - Step 24: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:09,711 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:58:10,711 - INFO - Step 25: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:10,868 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:58:11,869 - INFO - Step 26: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:15,317 - INFO - Load balancing completed
+2025-06-30 15:58:16,317 - INFO - Step 27: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:16,379 - INFO - Cache clearing completed
+2025-06-30 15:58:17,380 - INFO - Step 28: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:19,308 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:58:20,310 - INFO - Step 29: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:23,502 - INFO - Load balancing completed
+2025-06-30 15:58:24,502 - INFO - Step 30: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:24,573 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:58:25,574 - INFO - Step 31: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:29,045 - INFO - Load balancing completed
+2025-06-30 15:58:30,046 - INFO - Step 32: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:30,171 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:58:31,172 - INFO - Step 33: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:31,225 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:58:32,226 - INFO - Step 34: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:33,226 - INFO - Step 35: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:33,396 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:58:34,399 - INFO - Step 36: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:34,462 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:58:35,463 - INFO - Step 37: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:36,464 - INFO - Step 38: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:36,489 - INFO - DNS flush completed
+2025-06-30 15:58:37,490 - INFO - Step 39: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:37,525 - INFO - DNS flush completed
+2025-06-30 15:58:38,526 - INFO - Step 40: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:38,590 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:58:39,591 - INFO - Step 41: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:39,655 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:58:40,666 - INFO - Step 42: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:40,716 - INFO - DNS flush completed
+2025-06-30 15:58:41,716 - INFO - Step 43: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:41,800 - INFO - DNS flush completed
+2025-06-30 15:58:42,801 - INFO - Step 44: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:42,857 - INFO - DNS flush completed
+2025-06-30 15:58:43,859 - INFO - Step 45: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:43,924 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:58:44,925 - INFO - Step 46: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:44,960 - INFO - DNS flush completed
+2025-06-30 15:58:45,961 - INFO - Step 47: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:46,046 - INFO - Cache clearing completed
+2025-06-30 15:58:47,047 - INFO - Step 48: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:47,112 - INFO - Cache clearing completed
+2025-06-30 15:58:48,113 - INFO - Step 49: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:50,314 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:58:51,315 - INFO - Step 50: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:51,325 - INFO - Model saved to models\best_model.pth
+2025-06-30 15:58:51,325 - INFO - New best model saved with average reward: 0.00
+2025-06-30 15:58:51,328 - INFO - Model saved to models\checkpoint_episode_0.pth
+2025-06-30 15:58:51,328 - INFO - Checkpoint saved at episode 0
+2025-06-30 15:58:51,329 - INFO - Episode 1 Summary:
+2025-06-30 15:58:51,329 - INFO - Total Reward: 0.00
+2025-06-30 15:58:51,329 - INFO - Final Performance: 0.00%
+2025-06-30 15:58:51,329 - INFO - Epsilon: 1.0000
+2025-06-30 15:58:51,329 - INFO - 
+Starting episode 2/1000
+2025-06-30 15:58:51,993 - INFO - Network monitoring stopped
+2025-06-30 15:58:52,000 - INFO - Discovered network interfaces: ['{6C297358-0FBC-4019-AE32-5427BDF0E2FD}', '{C45F04FE-14E6-4FBA-9ED3-3C1BCC100FD5}', '{1784694A-3FE2-4262-A3FD-DA4BB600B57E}', '{67944BCC-B869-4E92-9BCB-EB69B633EE33}', '{A2B8B458-55FE-11EB-A2E1-806E6F6E6963}']
+2025-06-30 15:58:52,034 - INFO - Network monitoring started
+2025-06-30 15:58:53,113 - INFO - Cache clearing completed
+2025-06-30 15:58:54,114 - INFO - Step 1: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:55,124 - INFO - Step 2: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:55,188 - INFO - Cache clearing completed
+2025-06-30 15:58:56,189 - INFO - Step 3: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:56,243 - INFO - Cache clearing completed
+2025-06-30 15:58:57,243 - INFO - Step 4: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:58,253 - INFO - Step 5: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:59,270 - INFO - Step 6: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:58:59,388 - INFO - Cache clearing completed
+2025-06-30 15:59:00,389 - INFO - Step 7: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:00,460 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:59:01,461 - INFO - Step 8: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:04,852 - INFO - Load balancing completed
+2025-06-30 15:59:05,852 - INFO - Step 9: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:06,347 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:59:07,349 - INFO - Step 10: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:07,397 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:59:08,398 - INFO - Step 11: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:08,519 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:59:09,521 - INFO - Step 12: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:11,674 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:59:12,675 - INFO - Step 13: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:12,701 - INFO - DNS flush completed
+2025-06-30 15:59:13,711 - INFO - Step 14: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:16,956 - INFO - Load balancing completed
+2025-06-30 15:59:17,960 - INFO - Step 15: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:18,014 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:59:19,019 - INFO - Step 16: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:20,024 - INFO - Step 17: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:20,196 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:59:21,200 - INFO - Step 18: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:22,952 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:59:23,960 - INFO - Step 19: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:24,023 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:59:25,054 - INFO - Step 20: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:28,963 - INFO - Load balancing completed
+2025-06-30 15:59:29,968 - INFO - Step 21: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:30,143 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:59:31,148 - INFO - Step 22: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:31,185 - INFO - DNS flush completed
+2025-06-30 15:59:32,190 - INFO - Step 23: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:32,249 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:59:33,275 - INFO - Step 24: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:34,914 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:59:35,919 - INFO - Step 25: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:35,947 - INFO - DNS flush completed
+2025-06-30 15:59:36,952 - INFO - Step 26: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:38,514 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:59:39,519 - INFO - Step 27: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:39,571 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 15:59:40,576 - INFO - Step 28: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:40,757 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 15:59:41,760 - INFO - Step 29: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:41,789 - INFO - DNS flush completed
+2025-06-30 15:59:42,792 - INFO - Step 30: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:42,858 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:59:43,862 - INFO - Step 31: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:43,928 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:59:44,932 - INFO - Step 32: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:46,638 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:59:47,642 - INFO - Step 33: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:47,697 - INFO - Cache clearing completed
+2025-06-30 15:59:48,701 - INFO - Step 34: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:51,467 - INFO - Load balancing completed
+2025-06-30 15:59:52,471 - INFO - Step 35: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:52,532 - INFO - Cache clearing completed
+2025-06-30 15:59:53,535 - INFO - Step 36: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:55,198 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:59:56,202 - INFO - Step 37: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:56,278 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 15:59:57,282 - INFO - Step 38: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 15:59:58,766 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 15:59:59,771 - INFO - Step 39: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:02,596 - INFO - Load balancing completed
+2025-06-30 16:00:03,600 - INFO - Step 40: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:04,604 - INFO - Step 41: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:04,678 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 16:00:05,683 - INFO - Step 42: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:05,883 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 16:00:06,887 - INFO - Step 43: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:06,938 - INFO - Cache clearing completed
+2025-06-30 16:00:07,942 - INFO - Step 44: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:10,550 - INFO - Load balancing completed
+2025-06-30 16:00:11,555 - INFO - Step 45: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:14,310 - INFO - Load balancing completed
+2025-06-30 16:00:15,318 - INFO - Step 46: Action=5, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:15,354 - INFO - DNS flush completed
+2025-06-30 16:00:16,359 - INFO - Step 47: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:16,549 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 16:00:17,553 - INFO - Step 48: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:18,557 - INFO - Step 49: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:18,586 - INFO - DNS flush completed
+2025-06-30 16:00:19,590 - INFO - Step 50: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:19,591 - INFO - Episode 2 Summary:
+2025-06-30 16:00:19,591 - INFO - Total Reward: 0.00
+2025-06-30 16:00:19,591 - INFO - Average Loss: 0.0009
+2025-06-30 16:00:19,591 - INFO - Final Performance: 0.00%
+2025-06-30 16:00:19,591 - INFO - Epsilon: 0.8307
+2025-06-30 16:00:19,591 - INFO - 
+Starting episode 3/1000
+2025-06-30 16:00:20,411 - INFO - Network monitoring stopped
+2025-06-30 16:00:20,419 - INFO - Discovered network interfaces: ['{6C297358-0FBC-4019-AE32-5427BDF0E2FD}', '{C45F04FE-14E6-4FBA-9ED3-3C1BCC100FD5}', '{1784694A-3FE2-4262-A3FD-DA4BB600B57E}', '{67944BCC-B869-4E92-9BCB-EB69B633EE33}', '{A2B8B458-55FE-11EB-A2E1-806E6F6E6963}']
+2025-06-30 16:00:20,458 - INFO - Network monitoring started
+2025-06-30 16:00:21,519 - INFO - DNS flush completed
+2025-06-30 16:00:22,525 - INFO - Step 1: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:22,700 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 16:00:23,704 - INFO - Step 2: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:25,467 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 16:00:26,471 - INFO - Step 3: Action=1, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:26,501 - INFO - DNS flush completed
+2025-06-30 16:00:27,505 - INFO - Step 4: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:27,577 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 16:00:28,582 - INFO - Step 5: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:28,771 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 16:00:29,775 - INFO - Step 6: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:29,831 - INFO - Cache clearing completed
+2025-06-30 16:00:30,835 - INFO - Step 7: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:30,890 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 16:00:31,894 - INFO - Step 8: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:31,968 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 16:00:32,974 - INFO - Step 9: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:33,043 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 16:00:34,047 - INFO - Step 10: Action=4, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:34,226 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 16:00:35,230 - INFO - Step 11: Action=2, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:35,262 - INFO - DNS flush completed
+2025-06-30 16:00:36,269 - INFO - Step 12: Action=6, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:36,343 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 16:00:37,347 - INFO - Step 13: Action=0, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:37,402 - INFO - Cache clearing completed
+2025-06-30 16:00:38,407 - INFO - Step 14: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:38,459 - INFO - Cache clearing completed
+2025-06-30 16:00:39,464 - INFO - Step 15: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:40,469 - INFO - Step 16: Action=7, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:40,537 - INFO - Cache clearing completed
+2025-06-30 16:00:41,540 - INFO - Step 17: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:41,595 - INFO - Cache clearing completed
+2025-06-30 16:00:42,600 - INFO - Step 18: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:42,651 - INFO - Cache clearing completed
+2025-06-30 16:00:43,659 - INFO - Step 19: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:43,724 - INFO - Cache clearing completed
+2025-06-30 16:00:44,729 - INFO - Step 20: Action=3, Reward=0.00, Performance=0.00%
+2025-06-30 16:00:44,788 - INFO - Cache clearing completed
+2025-06-30 16:03:54,646 - INFO - Starting training process
+2025-06-30 16:03:54,651 - INFO - Discovered network interfaces: ['{6C297358-0FBC-4019-AE32-5427BDF0E2FD}', '{C45F04FE-14E6-4FBA-9ED3-3C1BCC100FD5}', '{1784694A-3FE2-4262-A3FD-DA4BB600B57E}', '{67944BCC-B869-4E92-9BCB-EB69B633EE33}', '{A2B8B458-55FE-11EB-A2E1-806E6F6E6963}']
+2025-06-30 16:03:54,681 - INFO - Network monitoring started
+2025-06-30 16:03:58,811 - INFO - 
+Starting episode 1/1000
+2025-06-30 16:03:59,802 - INFO - Network monitoring stopped
+2025-06-30 16:03:59,807 - INFO - Discovered network interfaces: ['{6C297358-0FBC-4019-AE32-5427BDF0E2FD}', '{C45F04FE-14E6-4FBA-9ED3-3C1BCC100FD5}', '{1784694A-3FE2-4262-A3FD-DA4BB600B57E}', '{67944BCC-B869-4E92-9BCB-EB69B633EE33}', '{A2B8B458-55FE-11EB-A2E1-806E6F6E6963}']
+2025-06-30 16:03:59,839 - INFO - Network monitoring started
+2025-06-30 16:04:02,358 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 16:04:03,359 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:04,360 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:04,527 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 16:04:05,528 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:05,606 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 16:04:06,607 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:06,671 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 16:04:07,672 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:07,752 - INFO - Cache clearing completed
+2025-06-30 16:04:08,753 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:10,518 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 16:04:11,518 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:11,566 - INFO - Cache clearing completed
+2025-06-30 16:04:12,567 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:12,723 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 16:04:13,724 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:13,783 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 16:04:14,785 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:14,844 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 16:04:15,845 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:16,845 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:17,846 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:19,626 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 16:04:20,627 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:24,370 - INFO - Load balancing completed
+2025-06-30 16:04:25,371 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:25,415 - INFO - DNS flush completed
+2025-06-30 16:04:26,416 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:26,518 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 16:04:27,519 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:27,586 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 16:04:28,607 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:28,663 - INFO - Cache clearing completed
+2025-06-30 16:04:29,664 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:32,682 - INFO - Load balancing completed
+2025-06-30 16:04:33,683 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:35,597 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 16:04:36,598 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:37,599 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:38,599 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:41,590 - INFO - Load balancing completed
+2025-06-30 16:04:42,590 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:43,600 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:43,765 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 16:04:44,765 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:44,824 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 16:04:45,825 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:46,002 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 16:04:47,003 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:47,156 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 16:04:48,156 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:49,157 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:52,078 - INFO - Load balancing completed
+2025-06-30 16:04:53,078 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:53,129 - INFO - Cache clearing completed
+2025-06-30 16:04:54,129 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:55,699 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 16:04:56,700 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:56,726 - INFO - DNS flush completed
+2025-06-30 16:04:57,727 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:57,889 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 16:04:58,890 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:04:58,948 - INFO - Cache clearing completed
+2025-06-30 16:04:59,948 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:05:03,514 - INFO - Load balancing completed
+2025-06-30 16:05:04,516 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:05:04,593 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 16:05:05,594 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:05:05,636 - INFO - DNS flush completed
+2025-06-30 16:05:06,639 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:05:06,691 - INFO - DNS flush completed
+2025-06-30 16:05:07,694 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:05:10,668 - INFO - Load balancing completed
+2025-06-30 16:05:11,681 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:05:11,715 - INFO - DNS flush completed
+2025-06-30 16:05:12,716 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:05:14,483 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 16:05:15,484 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:05:18,397 - INFO - Load balancing completed
+2025-06-30 16:05:19,398 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:05:19,429 - INFO - DNS flush completed
+2025-06-30 16:05:20,430 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:05:22,243 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 16:05:23,244 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:05:23,292 - INFO - Cache clearing completed
+2025-06-30 16:05:24,292 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:05:24,389 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 16:05:25,393 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:05:25,541 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 16:05:26,542 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:05:28,280 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 16:05:29,281 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:05:29,292 - INFO - Model saved to models\best_reward_model.pth
+2025-06-30 16:05:29,292 - INFO - New best reward model saved with average reward: 0.00
+2025-06-30 16:05:29,300 - INFO - Model saved to models\best_performance_model.pth
+2025-06-30 16:05:29,300 - INFO - New best performance model saved with performance: 0.00%
+2025-06-30 16:05:29,309 - INFO - Model saved to models\checkpoint_episode_0.pth
+2025-06-30 16:05:29,311 - INFO - Checkpoint saved at episode 0
+2025-06-30 16:05:29,312 - INFO - Current average reward: 0.00
+2025-06-30 16:05:29,313 - INFO - Current average performance: 0.00%
+2025-06-30 16:05:29,313 - INFO - Episode 1 Summary:
+2025-06-30 16:05:29,313 - INFO - Total Reward: 0.00
+2025-06-30 16:05:29,313 - ERROR - Error during training: name 'current_performance' is not defined
+2025-06-30 16:05:29,322 - INFO - Model saved to models\final_model.pth
+2025-06-30 16:05:29,323 - INFO - 
+Training completed!
+2025-06-30 16:05:29,324 - INFO - Final model saved to: models\final_model.pth
+2025-06-30 16:05:29,324 - INFO - Final metrics saved to: models\final_metrics.json
+2025-06-30 16:05:30,184 - INFO - Network monitoring stopped
+2025-06-30 16:05:46,203 - INFO - Starting training process
+2025-06-30 16:05:46,211 - INFO - Discovered network interfaces: ['{6C297358-0FBC-4019-AE32-5427BDF0E2FD}', '{C45F04FE-14E6-4FBA-9ED3-3C1BCC100FD5}', '{1784694A-3FE2-4262-A3FD-DA4BB600B57E}', '{67944BCC-B869-4E92-9BCB-EB69B633EE33}', '{A2B8B458-55FE-11EB-A2E1-806E6F6E6963}']
+2025-06-30 16:05:46,245 - INFO - Network monitoring started
+2025-06-30 16:05:49,721 - INFO - 
+Starting episode 1/1000
+2025-06-30 16:05:50,332 - INFO - Network monitoring stopped
+2025-06-30 16:05:50,337 - INFO - Discovered network interfaces: ['{6C297358-0FBC-4019-AE32-5427BDF0E2FD}', '{C45F04FE-14E6-4FBA-9ED3-3C1BCC100FD5}', '{1784694A-3FE2-4262-A3FD-DA4BB600B57E}', '{67944BCC-B869-4E92-9BCB-EB69B633EE33}', '{A2B8B458-55FE-11EB-A2E1-806E6F6E6963}']
+2025-06-30 16:05:50,382 - INFO - Network monitoring started
+2025-06-30 16:05:51,567 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 16:05:52,567 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:05:52,627 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 16:05:53,628 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:05:56,519 - INFO - Load balancing completed
+2025-06-30 16:05:57,520 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:05:57,590 - INFO - Cache clearing completed
+2025-06-30 16:05:58,608 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:01,359 - INFO - Load balancing completed
+2025-06-30 16:06:02,360 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:02,541 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 16:06:03,542 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:03,563 - INFO - DNS flush completed
+2025-06-30 16:06:04,564 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:04,607 - INFO - Cache clearing completed
+2025-06-30 16:06:05,607 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:05,755 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 16:06:06,756 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:06,818 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 16:06:07,834 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:07,993 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 16:06:08,993 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:09,016 - INFO - DNS flush completed
+2025-06-30 16:06:10,017 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:11,018 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:13,688 - INFO - Load balancing completed
+2025-06-30 16:06:14,689 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:17,396 - INFO - Load balancing completed
+2025-06-30 16:06:18,397 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:18,420 - INFO - DNS flush completed
+2025-06-30 16:06:19,420 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:21,070 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 16:06:22,071 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:22,112 - INFO - Cache clearing completed
+2025-06-30 16:06:23,113 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:23,156 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 16:06:24,156 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:24,268 - INFO - Cache clearing completed
+2025-06-30 16:06:25,280 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:26,314 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:26,397 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 16:06:27,397 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:30,150 - INFO - Load balancing completed
+2025-06-30 16:06:31,151 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:33,903 - INFO - Load balancing completed
+2025-06-30 16:06:34,904 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:36,625 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 16:06:37,631 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:37,787 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 16:06:38,787 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:38,831 - INFO - Cache clearing completed
+2025-06-30 16:06:39,832 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:39,872 - INFO - Cache clearing completed
+2025-06-30 16:06:40,873 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:41,873 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:41,938 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 16:06:42,939 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:43,099 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 16:06:44,100 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:45,644 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 16:06:46,645 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:46,698 - INFO - Cache clearing completed
+2025-06-30 16:06:47,698 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:47,747 - INFO - Cache clearing completed
+2025-06-30 16:06:48,748 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:49,749 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:51,398 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 16:06:52,399 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:53,400 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:53,485 - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-06-30 16:06:54,486 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:54,686 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 16:06:55,687 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:55,718 - INFO - DNS flush completed
+2025-06-30 16:06:56,720 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:57,720 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:57,891 - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-06-30 16:06:58,892 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:58,937 - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-06-30 16:06:59,938 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:06:59,967 - INFO - DNS flush completed
+2025-06-30 16:07:00,968 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:07:04,021 - INFO - Load balancing completed
+2025-06-30 16:07:05,021 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:07:05,050 - INFO - DNS flush completed
+2025-06-30 16:07:06,051 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:07:08,111 - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-06-30 16:07:09,112 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:07:11,959 - INFO - Load balancing completed
+2025-06-30 16:07:12,959 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:07:15,702 - INFO - Load balancing completed
+2025-06-30 16:07:16,705 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:07:16,733 - INFO - DNS flush completed
+2025-06-30 16:07:17,734 - ERROR - Error during step execution: not enough values to unpack (expected 4, got 3)
+2025-06-30 16:07:17,798 - INFO - Model saved to models\best_reward_model.pth
+2025-06-30 16:07:17,822 - INFO - New best reward model saved with average reward: 0.00
+2025-06-30 16:07:17,834 - INFO - Model saved to models\best_performance_model.pth
+2025-06-30 16:07:17,852 - INFO - New best performance model saved with performance: 0.00%
+2025-06-30 16:07:17,860 - INFO - Model saved to models\checkpoint_episode_0.pth
+2025-06-30 16:07:17,861 - INFO - Checkpoint saved at episode 0
+2025-06-30 16:07:17,861 - INFO - Current average reward: 0.00
+2025-06-30 16:07:17,861 - INFO - Current average performance: 0.00%
+2025-06-30 16:07:17,861 - INFO - Episode 1 Summary:
+2025-06-30 16:07:17,861 - INFO - Total Reward: 0.00
+2025-06-30 16:07:17,861 - ERROR - Error during training: name 'current_performance' is not defined
+2025-06-30 16:07:17,869 - INFO - Model saved to models\final_model.pth
+2025-06-30 16:07:17,870 - INFO - 
+Training completed!
+2025-06-30 16:07:17,870 - INFO - Final model saved to: models\final_model.pth
+2025-06-30 16:07:17,870 - INFO - Final metrics saved to: models\final_metrics.json
+2025-06-30 16:07:18,732 - INFO - Network monitoring stopped

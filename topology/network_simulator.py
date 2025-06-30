@@ -17,6 +17,94 @@ class RealNetworkSimulator:
         self.links = []
         self.network_stats = defaultdict(dict)
         self.monitoring_active = False
+        self.monitoring_thread = None
+        self.baseline_stats = None
+    
+    def get_network_state_vector(self):
+        """Generate state vector for DQN agent"""
+        state = []
+        
+        # Link statistics
+        for link in self.links:
+            stats = self.network_stats.get(link, {})
+            state.extend([
+                stats.get('bandwidth_utilization', 0),
+                stats.get('latency', 0),
+                stats.get('packet_loss', 0)
+            ])
+        
+        # Switch statistics
+        for switch in self.switches:
+            stats = self.network_stats.get(switch, {})
+            state.extend([
+                stats.get('flow_count', 0),
+                stats.get('packet_count', 0),
+                stats.get('error_count', 0)
+            ])
+        
+        # Pad or truncate to fixed size
+        target_size = 80  # Must match state_space in MininetNetworkEnvironment
+        if len(state) < target_size:
+            state.extend([0] * (target_size - len(state)))
+        else:
+            state = state[:target_size]
+        
+        return np.array(state, dtype=np.float32)
+    
+    def calculate_network_performance(self):
+        """Calculate overall network performance score"""
+        if not self.network_stats:
+            return 0
+        
+        scores = []
+        
+        # Link performance
+        for link in self.links:
+            stats = self.network_stats.get(link, {})
+            if stats:
+                # Higher score for better performance
+                link_score = 100
+                link_score -= stats.get('packet_loss', 0) * 100  # Reduce score based on packet loss
+                link_score -= min(stats.get('latency', 0) / 100, 50)  # Reduce score based on latency
+                link_score -= stats.get('bandwidth_utilization', 0) / 2  # Reduce score for high utilization
+                scores.append(max(0, link_score))
+        
+        # Switch performance
+        for switch in self.switches:
+            stats = self.network_stats.get(switch, {})
+            if stats:
+                switch_score = 100
+                switch_score -= min(stats.get('error_count', 0) * 10, 50)
+                scores.append(max(0, switch_score))
+        
+        return np.mean(scores) if scores else 0
+    
+    def inject_network_failure(self, failure_type):
+        """Inject artificial network failures for training"""
+        if failure_type == 'link_failure':
+            # Simulate link failure by increasing packet loss
+            if self.links:
+                link = np.random.choice(self.links)
+                self.network_stats[link]['packet_loss'] = np.random.uniform(0.3, 0.8)
+        
+        elif failure_type == 'congestion':
+            # Simulate congestion by increasing bandwidth utilization
+            if self.links:
+                link = np.random.choice(self.links)
+                self.network_stats[link]['bandwidth_utilization'] = np.random.uniform(0.8, 1.0)
+        
+        elif failure_type == 'high_latency':
+            # Simulate high latency
+            if self.links:
+                link = np.random.choice(self.links)
+                self.network_stats[link]['latency'] = np.random.uniform(50, 200)
+        
+        elif failure_type == 'packet_loss':
+            # Simulate packet loss on multiple links
+            if self.links:
+                affected_links = np.random.choice(self.links, size=min(3, len(self.links)), replace=False)
+                for link in affected_links:
+                    self.network_stats[link]['packet_loss'] = np.random.uniform(0.1, 0.4)
 
     def create_enterprise_topology(self):
         """Create a realistic enterprise network topology"""
@@ -98,6 +186,137 @@ class RealNetworkSimulator:
         self.net.start()
 
         for host in self.hosts:
+            # Configure hosts
+            host.cmd('sysctl -w net.ipv4.tcp_congestion_control=cubic')
+        
+        # Start monitoring
+        self.start_monitoring()
+    
+    def stop_network(self):
+        """Stop the network and monitoring"""
+        self.stop_monitoring()
+        if self.net:
+            self.net.stop()
+    
+    def start_monitoring(self):
+        """Start network monitoring in a separate thread"""
+        if not self.monitoring_active:
+            self.monitoring_active = True
+            self.monitoring_thread = threading.Thread(target=self._monitor_network)
+            self.monitoring_thread.daemon = True
+            self.monitoring_thread.start()
+    
+    def stop_monitoring(self):
+        """Stop network monitoring"""
+        self.monitoring_active = False
+        if self.monitoring_thread:
+            self.monitoring_thread.join(timeout=1)
+    
+    def _monitor_network(self):
+        """Monitor network statistics in real-time"""
+        while self.monitoring_active:
+            try:
+                # Monitor links
+                for link in self.links:
+                    if hasattr(link, 'intf1') and hasattr(link, 'intf2'):
+                        # Measure bandwidth utilization
+                        stats1 = psutil.net_io_counters(pernic=True).get(link.intf1.name, None)
+                        stats2 = psutil.net_io_counters(pernic=True).get(link.intf2.name, None)
+                        
+                        if stats1 and stats2:
+                            bytes_sent = stats1.bytes_sent + stats2.bytes_sent
+                            bytes_recv = stats1.bytes_recv + stats2.bytes_recv
+                            
+                            # Calculate utilization based on link capacity
+                            capacity = getattr(link, 'bw', 10) * 1000000 / 8  # Convert Mbps to bytes/s
+                            utilization = (bytes_sent + bytes_recv) / capacity
+                            self.network_stats[link]['bandwidth_utilization'] = min(1.0, utilization)
+                        
+                        # Measure latency
+                        latency = self._measure_latency(link.intf1.name, link.intf2.name)
+                        if latency is not None:
+                            self.network_stats[link]['latency'] = latency
+                        
+                        # Measure packet loss
+                        loss = self._measure_packet_loss(link.intf1.name, link.intf2.name)
+                        if loss is not None:
+                            self.network_stats[link]['packet_loss'] = loss
+                
+                # Monitor switches
+                for switch in self.switches:
+                    # Get flow statistics
+                    flow_stats = self._get_switch_flow_stats(switch)
+                    if flow_stats:
+                        self.network_stats[switch].update(flow_stats)
+                
+                time.sleep(1)  # Update interval
+            
+            except Exception as e:
+                print(f"Error in network monitoring: {str(e)}")
+                time.sleep(1)
+    
+    def _measure_latency(self, intf1, intf2):
+        """Measure latency between two interfaces"""
+        try:
+            result = subprocess.run(
+                ['ping', '-c', '3', '-q', intf2],
+                capture_output=True,
+                text=True,
+                timeout=5
+            )
+            
+            if result.returncode == 0:
+                # Extract average latency from ping output
+                lines = result.stdout.split('\n')
+                for line in lines:
+                    if 'avg' in line:
+                        latency = float(line.split('/')[-3])
+                        return latency
+            return None
+        except:
+            return None
+    
+    def _measure_packet_loss(self, intf1, intf2):
+        """Measure packet loss between two interfaces"""
+        try:
+            result = subprocess.run(
+                ['ping', '-c', '10', '-q', intf2],
+                capture_output=True,
+                text=True,
+                timeout=5
+            )
+            
+            if result.returncode == 0:
+                # Extract packet loss percentage from ping output
+                lines = result.stdout.split('\n')
+                for line in lines:
+                    if 'packet loss' in line:
+                        loss = float(line.split('%')[0].split(' ')[-1]) / 100
+                        return loss
+            return None
+        except:
+            return None
+    
+    def _get_switch_flow_stats(self, switch):
+        """Get flow statistics from a switch"""
+        try:
+            result = subprocess.run(
+                ['ovs-ofctl', 'dump-flows', switch.name],
+                capture_output=True,
+                text=True,
+                timeout=5
+            )
+            
+            if result.returncode == 0:
+                flows = result.stdout.strip().split('\n')
+                return {
+                    'flow_count': len(flows),
+                    'packet_count': sum(int(flow.split('n_packets=')[1].split(',')[0]) for flow in flows if 'n_packets=' in flow),
+                    'error_count': 0  # Initialize error count
+                }
+            return None
+        except:
+            return None
             host.cmd('sysctl net.ipv4.ip_forward=1')
 
         self.start_network_monitoring()
