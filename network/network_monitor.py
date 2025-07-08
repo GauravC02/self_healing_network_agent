@@ -21,18 +21,22 @@ class NetworkMonitor:
         self.last_update_time = 0
         self.update_interval = 1  # seconds
         
-        # Initialize logging with debug level
-        try:
-            logging.basicConfig(
-                level=logging.DEBUG,
-                format='%(asctime)s - %(levelname)s - %(message)s',
-                handlers=[
-                    logging.FileHandler('network_monitor.log'),
-                    logging.StreamHandler()
-                ]
-            )
+        # Initialize logger
+        self.logger = logging.getLogger(__name__)
+        self.logger.setLevel(logging.DEBUG)
+        
+        # Add handlers if they don't exist
+        if not self.logger.handlers:
+            file_handler = logging.FileHandler('network_monitor.log')
+            console_handler = logging.StreamHandler()
+            formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+            file_handler.setFormatter(formatter)
+            console_handler.setFormatter(formatter)
+            self.logger.addHandler(file_handler)
+            self.logger.addHandler(console_handler)
             
-            # Ensure PowerShell execution policy allows running commands
+        # Ensure PowerShell execution policy allows running commands
+        try:
             cmd = 'Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force'
             subprocess.run(['powershell', '-Command', cmd], capture_output=True)
             
@@ -40,11 +44,14 @@ class NetworkMonitor:
             test_cmd = 'Get-NetAdapter | Select-Object -First 1'
             result = subprocess.run(['powershell', '-Command', test_cmd], capture_output=True, text=True)
             if result.returncode != 0:
-                logging.error(f"Failed to access network adapters: {result.stderr}")
+                self.logger.error(f"Failed to access network adapters: {result.stderr}")
             
+        except subprocess.SubprocessError as e:
+            self.logger.error(f"PowerShell execution failed: {str(e)}")
+            raise RuntimeError(f"Failed to configure PowerShell environment: {str(e)}") from e
         except Exception as e:
-            logging.error(f"Error initializing network monitor: {str(e)}")
-            raise
+            self.logger.error(f"Error initializing network monitor: {str(e)}")
+            raise RuntimeError(f"Network monitor initialization failed: {str(e)}") from e
     
     def initialize(self):
         """Initialize network monitoring by discovering interfaces and collecting baseline statistics"""
@@ -58,15 +65,15 @@ class NetworkMonitor:
                 active_interfaces = [iface.strip() for iface in result.stdout.split('\n') if iface.strip()]
                 if active_interfaces:
                     self.interfaces = active_interfaces
-                    logging.info(f"Discovered active network interfaces: {self.interfaces}")
+                    self.logger.info(f"Discovered active network interfaces: {self.interfaces}")
                 else:
                     # Fallback to netifaces if no active interfaces found
                     self.interfaces = netifaces.interfaces()
-                    logging.warning("No active interfaces found via PowerShell, falling back to netifaces")
+                    self.logger.warning("No active interfaces found via PowerShell, falling back to netifaces")
             else:
                 # Fallback to netifaces if PowerShell command fails
                 self.interfaces = netifaces.interfaces()
-                logging.warning(f"PowerShell interface detection failed, falling back to netifaces: {result.stderr}")
+                self.logger.warning(f"PowerShell interface detection failed, falling back to netifaces: {result.stderr}")
             
             if not self.interfaces:
                 raise RuntimeError("No network interfaces found")
@@ -81,7 +88,7 @@ class NetworkMonitor:
             self.monitoring_thread = threading.Thread(target=self._monitor_network)
             self.monitoring_thread.daemon = True
             self.monitoring_thread.start()
-            logging.info("Network monitoring started")
+            self.logger.info("Network monitoring started")
             
             # Wait for monitoring thread to start
             time.sleep(1)
@@ -94,20 +101,20 @@ class NetworkMonitor:
                     if stats and any(stats.values()):
                         self.baseline_stats = stats
                         baseline_collected = True
-                        logging.info(f"Successfully collected baseline statistics on attempt {attempt + 1}")
-                        logging.debug(f"Baseline stats: {self.baseline_stats}")
+                        self.logger.info(f"Successfully collected baseline statistics on attempt {attempt + 1}")
+                        self.logger.debug(f"Baseline stats: {self.baseline_stats}")
                         break
                     else:
-                        logging.warning(f"Attempt {attempt + 1}/{max_retries}: No valid baseline statistics collected")
+                        self.logger.warning(f"Attempt {attempt + 1}/{max_retries}: No valid baseline statistics collected")
                 except Exception as e:
-                    logging.warning(f"Attempt {attempt + 1}/{max_retries} failed: {str(e)}")
+                    self.logger.warning(f"Attempt {attempt + 1}/{max_retries} failed: {str(e)}")
                 
                 if attempt < max_retries - 1:
-                    logging.info(f"Waiting {retry_delay} seconds before next retry...")
+                    self.logger.info(f"Waiting {retry_delay} seconds before next retry...")
                     time.sleep(retry_delay)
             
             if not baseline_collected:
-                logging.warning("Failed to collect baseline statistics after all retries")
+                self.logger.warning("Failed to collect baseline statistics after all retries")
                 self.baseline_stats = defaultdict(lambda: {
                     'bandwidth_utilization': 0,
                     'latency': 0,
@@ -123,26 +130,38 @@ class NetworkMonitor:
             # Log successful initialization
             if baseline_collected:
                 baseline_score = self.calculate_performance_score()
-                logging.info(f"Network monitoring initialized. Baseline performance: {baseline_score:.2f}%")
+                self.logger.info(f"Network monitoring initialized. Baseline performance: {baseline_score:.2f}%")
             else:
-                logging.info("Network monitoring initialized with default baseline values")
+                self.logger.info("Network monitoring initialized with default baseline values")
             
-        except Exception as e:
-            logging.error(f"Error initializing network monitoring: {str(e)}")
+        except subprocess.SubprocessError as e:
+            self.logger.error(f"PowerShell command failed during initialization: {str(e)}")
             self.monitoring_active = False
             if self.monitoring_thread and self.monitoring_thread.is_alive():
                 self.monitoring_thread.join(timeout=1)
-            raise
+            raise RuntimeError(f"Network interface detection failed: {str(e)}") from e
+        except threading.ThreadError as e:
+            self.logger.error(f"Thread error during initialization: {str(e)}")
+            self.monitoring_active = False
+            if self.monitoring_thread and self.monitoring_thread.is_alive():
+                self.monitoring_thread.join(timeout=1)
+            raise RuntimeError(f"Failed to start monitoring thread: {str(e)}") from e
+        except Exception as e:
+            self.logger.error(f"Unexpected error during initialization: {str(e)}")
+            self.monitoring_active = False
+            if self.monitoring_thread and self.monitoring_thread.is_alive():
+                self.monitoring_thread.join(timeout=1)
+            raise RuntimeError(f"Network monitoring initialization failed: {str(e)}") from e
     
     def start_monitoring(self):
         """Start network monitoring in a separate thread with error handling"""
         try:
             if self.monitoring_active:
                 if self.monitoring_thread and self.monitoring_thread.is_alive():
-                    logging.warning("Network monitoring is already active")
+                    self.logger.warning("Network monitoring is already active")
                     return
                 else:
-                    logging.warning("Monitoring thread died unexpectedly, restarting")
+                    self.logger.warning("Monitoring thread died unexpectedly, restarting")
             
             # Reset monitoring state
             self.monitoring_active = True
@@ -158,19 +177,24 @@ class NetworkMonitor:
             if not self.monitoring_thread.is_alive():
                 raise RuntimeError("Failed to start monitoring thread")
             
-            logging.info("Network monitoring started successfully")
+            self.logger.info("Network monitoring started successfully")
             
+        except threading.ThreadError as e:
+            self.monitoring_active = False
+            self.monitoring_thread = None
+            self.logger.error(f"Thread creation failed: {str(e)}")
+            raise RuntimeError(f"Failed to create monitoring thread: {str(e)}") from e
         except Exception as e:
             self.monitoring_active = False
             self.monitoring_thread = None
-            logging.error(f"Failed to start network monitoring: {str(e)}")
-            raise
+            self.logger.error(f"Unexpected error starting monitoring: {str(e)}")
+            raise RuntimeError(f"Failed to start network monitoring: {str(e)}") from e
     
     def stop_monitoring(self):
         """Stop network monitoring with cleanup"""
         try:
             if not self.monitoring_active:
-                logging.warning("Network monitoring is already stopped")
+                self.logger.warning("Network monitoring is already stopped")
                 return
             
             # Signal thread to stop
@@ -178,25 +202,127 @@ class NetworkMonitor:
             
             # Wait for thread to finish with timeout
             if self.monitoring_thread and self.monitoring_thread.is_alive():
-                logging.info("Waiting for monitoring thread to stop...")
+                self.logger.info("Waiting for monitoring thread to stop...")
                 self.monitoring_thread.join(timeout=2)
                 
                 if self.monitoring_thread.is_alive():
-                    logging.warning("Monitoring thread did not stop gracefully")
+                    self.logger.warning("Monitoring thread did not stop gracefully")
                 else:
-                    logging.info("Monitoring thread stopped successfully")
+                    self.logger.info("Monitoring thread stopped successfully")
             
             # Clear monitoring state
             self.monitoring_thread = None
             self.last_update_time = 0
             
+        except threading.ThreadError as e:
+            self.logger.error(f"Thread error while stopping monitoring: {str(e)}")
+            raise RuntimeError(f"Failed to stop monitoring thread: {str(e)}") from e
+        except TimeoutError as e:
+            self.logger.error(f"Timeout while waiting for monitoring thread to stop: {str(e)}")
+            raise RuntimeError(f"Monitoring thread stop timeout: {str(e)}") from e
         except Exception as e:
-            logging.error(f"Error stopping network monitoring: {str(e)}")
-            raise
+            self.logger.error(f"Unexpected error stopping network monitoring: {str(e)}")
+            raise RuntimeError(f"Failed to stop network monitoring: {str(e)}") from e
         finally:
-            # Ensure monitoring is marked as inactive
+            # Ensure monitoring is marked as inactive and cleanup is performed
             self.monitoring_active = False
-            logging.info("Network monitoring stopped")
+            self.monitoring_thread = None
+            self.last_update_time = 0
+            self.logger.info("Network monitoring stopped and resources cleaned up")
+            
+    def _collect_network_stats(self):
+        """Collect network statistics for all monitored interfaces"""
+        try:
+            current_stats = defaultdict(dict)
+            current_time = time.time()
+            
+            for interface in self.interfaces:
+                try:
+                    # Get network interface statistics using PowerShell
+                    cmd = f'Get-NetAdapter -InterfaceDescription "{interface}" | Get-NetAdapterStatistics'
+                    result = subprocess.run(['powershell', '-Command', cmd], capture_output=True, text=True)
+                    
+                    if result.returncode == 0:
+                        # Parse PowerShell output
+                        stats = {}
+                        lines = result.stdout.strip().split('\n')
+                        for line in lines:
+                            if ':' in line:
+                                key, value = line.split(':', 1)
+                                stats[key.strip()] = value.strip()
+                        
+                        # Calculate metrics
+                        bytes_sent = int(stats.get('BytesSent', 0))
+                        bytes_recv = int(stats.get('BytesReceived', 0))
+                        packets_sent = int(stats.get('PacketsSent', 0))
+                        packets_recv = int(stats.get('PacketsReceived', 0))
+                        errors = int(stats.get('ErrorsReceived', 0)) + int(stats.get('ErrorsSent', 0))
+                        
+                        # Calculate bandwidth utilization (Mbps)
+                        if self.last_update_time > 0:
+                            time_diff = current_time - self.last_update_time
+                            bandwidth = ((bytes_sent + bytes_recv) * 8) / (time_diff * 1_000_000)  # Mbps
+                        else:
+                            bandwidth = 0
+                        
+                        # Measure latency using ping
+                        latency = self._measure_latency(interface)
+
+                        
+                        # Calculate packet loss rate
+                        total_packets = packets_sent + packets_recv
+                        packet_loss = errors / total_packets if total_packets > 0 else 0
+                        
+                        # Calculate error rate
+                        error_rate = errors / total_packets if total_packets > 0 else 0
+                        
+                        # Store metrics
+                        current_stats[interface] = {
+                            'bandwidth_utilization': bandwidth,
+                            'latency': latency,
+                            'packet_loss': packet_loss * 100,  # Convert to percentage
+                            'error_rate': error_rate * 100,  # Convert to percentage
+                            'throughput': bytes_sent + bytes_recv
+                        }
+                        
+                    else:
+                        self.logger.warning(f"Failed to get statistics for interface {interface}: {result.stderr}")
+                        
+                except subprocess.SubprocessError as e:
+                    self.logger.error(f"PowerShell command failed for interface {interface}: {str(e)}")
+                    continue
+                except ValueError as e:
+                    self.logger.error(f"Invalid statistics data for interface {interface}: {str(e)}")
+                    continue
+                except Exception as e:
+                    self.logger.error(f"Unexpected error collecting stats for interface {interface}: {str(e)}")
+                    continue
+            
+            self.last_update_time = current_time
+            return current_stats
+            
+        except Exception as e:
+            self.logger.error(f"Critical error in network statistics collection: {str(e)}")
+            if self.monitoring_active:
+                self.logger.warning("Attempting to continue monitoring despite error")
+            return None
+            
+    def _measure_latency(self):
+        """Measure network latency using ping to a reliable host"""
+        try:
+            # Ping Google's DNS server
+            cmd = 'Test-Connection -ComputerName 8.8.8.8 -Count 1 | Select-Object -ExpandProperty ResponseTime'
+            result = subprocess.run(['powershell', '-Command', cmd], capture_output=True, text=True)
+            
+            if result.returncode == 0 and result.stdout.strip():
+                return float(result.stdout.strip())
+            else:
+                self.logger.warning(f"Failed to measure latency: {result.stderr}")
+                return 0
+                
+        except Exception as e:
+            self.logger.error(f"Error measuring latency: {str(e)}")
+            return 0
     
     def get_network_state(self):
         """Get current network state as a vector for the DQN agent"""
@@ -224,71 +350,67 @@ class NetworkMonitor:
     def calculate_performance_score(self):
         """Calculate overall network performance score with improved error handling"""
         if not self.network_stats:
-            logging.warning("No network statistics available for performance calculation")
-            return 0.0
+            self.logger.warning("No network statistics available for performance calculation")
+            return 1.0  # Return minimum baseline score instead of 0
         
         total_score = 0
         num_interfaces = 0
         weights = {
-            'bandwidth': 0.3,
-            'latency': 0.3,
-            'packet_loss': 0.2,
-            'error_rate': 0.2
+            'bandwidth': 0.25,
+            'latency': 0.25,
+            'packet_loss': 0.25,
+            'error_rate': 0.25
         }
         
         for iface, stats in self.network_stats.items():
             try:
                 if not stats or not isinstance(stats, dict):
-                    logging.warning(f"Invalid or missing statistics for interface {iface}")
+                    self.logger.warning(f"Invalid or missing statistics for interface {iface}")
                     continue
                 
-                # Validate and normalize metrics
-                bandwidth_util = min(max(float(stats.get('bandwidth_utilization', 0)), 0), 100)
-                latency = min(max(float(stats.get('latency', 1000)), 0), 1000)  # Cap at 1000ms
-                packet_loss = min(max(float(stats.get('packet_loss', 0)), 0), 100)
-                error_rate = min(max(float(stats.get('error_percentage', 0)), 0), 100)
+                # Validate and normalize metrics with minimum non-zero values
+                bandwidth_util = min(max(float(stats.get('bandwidth_utilization', 1)), 1), 100)
+                latency = min(max(float(stats.get('latency', 500)), 1), 1000)  # Cap at 1000ms, min 1ms
+                packet_loss = min(max(float(stats.get('packet_loss', 1)), 0.1), 100)  # Min 0.1%
+                error_rate = min(max(float(stats.get('error_percentage', 1)), 0.1), 100)  # Min 0.1%
                 
-                # Calculate individual metric scores (0-100)
-                bandwidth_score = 100 - bandwidth_util  # Lower utilization is better
-                latency_score = max(0, 100 - (latency / 10))  # Lower latency is better
-                packet_loss_score = 100 - packet_loss  # Lower packet loss is better
-                error_score = 100 - error_rate  # Lower error rate is better
+                # Calculate individual metric scores (1-100)
+                bandwidth_score = max(1, 100 - bandwidth_util)  # Lower utilization is better
+                latency_score = max(1, 100 - (latency / 10))  # Lower latency is better
+                packet_loss_score = max(1, 100 - packet_loss)  # Lower packet loss is better
+                error_score = max(1, 100 - error_rate)  # Lower error rate is better
                 
                 # Log individual scores for debugging
-                logging.debug(f"Interface {iface} scores:")
-                logging.debug(f"  Bandwidth: {bandwidth_score:.2f}")
-                logging.debug(f"  Latency: {latency_score:.2f}")
-                logging.debug(f"  Packet Loss: {packet_loss_score:.2f}")
-                logging.debug(f"  Error Rate: {error_score:.2f}")
+                self.logger.debug(f"Interface {iface} scores:")
+                self.logger.debug(f"  Bandwidth: {bandwidth_score:.2f}")
+                self.logger.debug(f"  Latency: {latency_score:.2f}")
+                self.logger.debug(f"  Packet Loss: {packet_loss_score:.2f}")
+                self.logger.debug(f"  Error Rate: {error_score:.2f}")
                 
-                # Calculate weighted average for interface
-                interface_score = (
+                # Calculate weighted average for interface with minimum score guarantee
+                interface_score = max(1, (
                     bandwidth_score * weights['bandwidth'] +
                     latency_score * weights['latency'] +
                     packet_loss_score * weights['packet_loss'] +
                     error_score * weights['error_rate']
-                )
+                ))
                 
-                logging.debug(f"Interface {iface} overall score: {interface_score:.2f}")
+                self.logger.debug(f"Interface {iface} overall score: {interface_score:.2f}")
                 
                 total_score += interface_score
                 num_interfaces += 1
                 
             except Exception as e:
-                logging.error(f"Error calculating performance score for interface {iface}: {str(e)}")
+                self.logger.error(f"Error calculating performance score for interface {iface}: {str(e)}")
                 continue
         
         if num_interfaces == 0:
-            logging.warning("No valid interfaces found for performance calculation")
-            return 0.0
+            self.logger.warning("No valid interfaces found for performance calculation")
+            return 1.0  # Return minimum baseline score
         
-        final_score = total_score / num_interfaces
-        logging.info(f"Overall network performance score: {final_score:.2f}%")
+        final_score = max(1, total_score / num_interfaces)  # Ensure minimum score of 1
+        self.logger.info(f"Overall network performance score: {final_score:.2f}%")
         return final_score
-            # Removed duplicate code block as it was causing indentation issues
-        
-        # Return average score, minimum 1%
-        return max(1, np.mean(scores) if scores else 1)
     
     def _monitor_network(self):
         """Monitor network statistics in real-time with rate limiting and error handling"""
@@ -309,22 +431,28 @@ class NetworkMonitor:
                         consecutive_errors = 0  # Reset error counter on success
                         
                         # Log successful update
-                        logging.debug("Network statistics updated successfully")
+                        self.logger.debug("Network statistics updated successfully")
                     else:
-                        logging.warning("No valid network statistics collected")
+                        self.logger.warning("No valid network statistics collected")
                         consecutive_errors += 1
                 else:
                     # Sleep for the remaining time until next update
                     time.sleep(max(0, self.update_interval - (current_time - self.last_update_time)))
                     continue
                 
+            except subprocess.SubprocessError as e:
+                self.logger.error(f"PowerShell execution failed in network monitoring: {str(e)}")
+                consecutive_errors += 1
+            except json.JSONDecodeError as e:
+                self.logger.error(f"Failed to parse network statistics: {str(e)}")
+                consecutive_errors += 1
             except Exception as e:
-                logging.error(f"Error in network monitoring: {str(e)}")
+                self.logger.error(f"Unexpected error in network monitoring: {str(e)}")
                 consecutive_errors += 1
                 
             # Handle consecutive errors
             if consecutive_errors >= max_consecutive_errors:
-                logging.error(f"Multiple consecutive errors ({consecutive_errors}). Increasing delay.")
+                self.logger.error(f"Multiple consecutive errors ({consecutive_errors}). Increasing delay.")
                 time.sleep(error_delay)
                 error_delay = min(error_delay * 2, 10)  # Exponential backoff, max 10 seconds
             else:
@@ -348,16 +476,20 @@ class NetworkMonitor:
                     elif 'mbps' in unit:
                         return value  # Already in MBps
                     else:
-                        logging.warning(f"Unknown speed unit for interface {iface}: {unit}")
+                        self.logger.warning(f"Unknown speed unit for interface {iface}: {unit}")
                 except (ValueError, IndexError) as e:
-                    logging.warning(f"Failed to parse speed value for interface {iface}: {speed_str}")
+                    self.logger.warning(f"Failed to parse speed value for interface {iface}: {speed_str}")
             else:
-                logging.warning(f"Failed to get speed for interface {iface}. Using default speed.")
+                self.logger.warning(f"Failed to get speed for interface {iface}. Using default speed.")
             
         except subprocess.TimeoutExpired:
-            logging.warning(f"Timeout getting speed for interface {iface}")
+            self.logger.warning(f"Timeout getting speed for interface {iface}")
+        except subprocess.SubprocessError as e:
+            self.logger.error(f"PowerShell command failed getting speed for {iface}: {str(e)}")
+        except (ValueError, IndexError) as e:
+            self.logger.error(f"Failed to parse interface speed data for {iface}: {str(e)}")
         except Exception as e:
-            logging.error(f"Error getting interface speed for {iface}: {str(e)}")
+            self.logger.error(f"Unexpected error getting interface speed for {iface}: {str(e)}")
         
         # Default to 1 Gbps = 1024 MBps
         return 1024
@@ -370,9 +502,31 @@ class NetworkMonitor:
                 total_packets = net_io.packets_sent + net_io.packets_recv
                 if total_packets > 0:
                     return (net_io.dropin + net_io.dropout) / total_packets
+        except psutil.Error as e:
+            self.logger.error(f"PSUtil error measuring packet loss: {str(e)}")
+        except (AttributeError, TypeError) as e:
+            self.logger.error(f"Invalid network counter data: {str(e)}")
         except Exception as e:
-            logging.error(f"Error measuring packet loss: {str(e)}")
+            self.logger.error(f"Unexpected error measuring packet loss: {str(e)}")
         return 0.0
+
+    def _get_default_gateway(self):
+        """Get the default gateway IP address"""
+        try:
+            cmd = 'Get-NetRoute -DestinationPrefix "0.0.0.0/0" | Select-Object -ExpandProperty NextHop'
+            result = subprocess.run(['powershell', '-Command', cmd], capture_output=True, text=True, timeout=2)
+            
+            if result.returncode == 0 and result.stdout.strip():
+                return result.stdout.strip()
+            else:
+                self.logger.warning("Failed to get default gateway using PowerShell")
+                # Fallback to netifaces
+                gateways = netifaces.gateways()
+                if 'default' in gateways and netifaces.AF_INET in gateways['default']:
+                    return gateways['default'][netifaces.AF_INET][0]
+        except Exception as e:
+            self.logger.error(f"Error getting default gateway: {str(e)}")
+        return None
 
     def _measure_latency(self, iface):
         """Measure network latency with improved accuracy and timeout handling"""
@@ -388,7 +542,7 @@ class NetworkMonitor:
                 gateway = self._get_default_gateway()
             
             if not gateway:
-                logging.warning(f"No gateway found for interface {iface}")
+                self.logger.warning(f"No gateway found for interface {iface}")
                 return 1000
             
             # Use PowerShell Test-Connection for more reliable ping measurements
@@ -401,14 +555,14 @@ class NetworkMonitor:
                     # Cap latency at 1000ms and ensure it's not negative
                     return max(0, min(latency, 1000))
                 except ValueError:
-                    logging.warning(f"Invalid latency value received: {result.stdout.strip()}")
+                    self.logger.warning(f"Invalid latency value received: {result.stdout.strip()}")
             else:
-                logging.warning(f"No response from gateway {gateway} for interface {iface}")
+                self.logger.warning(f"No response from gateway {gateway} for interface {iface}")
                 
         except subprocess.TimeoutExpired:
-            logging.warning(f"Latency measurement timed out for interface {iface}")
+            self.logger.warning(f"Latency measurement timed out for interface {iface}")
         except Exception as e:
-            logging.error(f"Error measuring latency for interface {iface}: {str(e)}")
+            self.logger.error(f"Error measuring latency for interface {iface}: {str(e)}")
         
         return 1000  # Default to high latency for failed measurements
 
@@ -484,8 +638,11 @@ def _collect_network_stats(self):
                         last_bytes_recv = int(self.network_stats.get(iface, {}).get('last_bytes_received', 0))
                         bytes_sent_delta = calc_delta(bytes_sent, last_bytes_sent)
                         bytes_recv_delta = calc_delta(bytes_recv, last_bytes_recv)
+                    except (ValueError, TypeError) as e:
+                        self.logger.error(f"Invalid byte values for {iface}: {e}")
+                        bytes_sent_delta = bytes_recv_delta = 0
                     except Exception as e:
-                        self.logger.error(f"Error calculating byte deltas for {iface}: {e}")
+                        self.logger.error(f"Unexpected error calculating byte deltas for {iface}: {e}")
                         bytes_sent_delta = bytes_recv_delta = 0
 
                     try:
@@ -495,8 +652,11 @@ def _collect_network_stats(self):
                         last_packets_recv = int(self.network_stats.get(iface, {}).get('last_packets_received', 0))
                         packets_sent_delta = calc_delta(packets_sent, last_packets_sent)
                         packets_recv_delta = calc_delta(packets_recv, last_packets_recv)
+                    except (ValueError, TypeError) as e:
+                        self.logger.error(f"Invalid packet values for {iface}: {e}")
+                        packets_sent_delta = packets_recv_delta = 0
                     except Exception as e:
-                        self.logger.error(f"Error calculating packet deltas for {iface}: {e}")
+                        self.logger.error(f"Unexpected error calculating packet deltas for {iface}: {e}")
                         packets_sent_delta = packets_recv_delta = 0
 
                     try:
@@ -641,8 +801,14 @@ def _measure_latency(self, iface):
                         except ValueError:
                             self.logger.warning(f"Failed to parse latency from line: {line}")
         return 0
+    except subprocess.SubprocessError as e:
+        self.logger.error(f"Ping command failed for {iface}: {e}")
+        return 0
+    except (ValueError, AttributeError) as e:
+        self.logger.error(f"Failed to parse latency data for {iface}: {e}")
+        return 0
     except Exception as e:
-        self.logger.error(f"Error measuring latency on {iface}: {e}")
+        self.logger.error(f"Unexpected error measuring latency on {iface}: {e}")
         return 0
 
 
@@ -663,6 +829,12 @@ def _measure_packet_loss(self, iface):
                         except (ValueError, IndexError):
                             self.logger.warning(f"Failed to parse packet loss from line: {line}")
         return 0
+    except subprocess.SubprocessError as e:
+        self.logger.error(f"Ping command failed while measuring packet loss for {iface}: {e}")
+        return 0
+    except (ValueError, IndexError, AttributeError) as e:
+        self.logger.error(f"Failed to parse packet loss data for {iface}: {e}")
+        return 0
     except Exception as e:
-        self.logger.error(f"Error measuring packet loss on {iface}: {e}")
+        self.logger.error(f"Unexpected error measuring packet loss on {iface}: {e}")
         return 0

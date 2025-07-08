@@ -1,0 +1,936 @@
+2025-07-08 19:58:28,514 - __main__ - INFO - Starting training process with enhanced monitoring
+2025-07-08 19:58:28,515 - __main__ - INFO - Training Parameters:
+2025-07-08 19:58:28,515 - __main__ - INFO - Episodes: 1000
+2025-07-08 19:58:28,515 - __main__ - INFO - Max Steps per Episode: 50
+2025-07-08 19:58:28,515 - __main__ - INFO - Save Interval: 10
+2025-07-08 19:58:28,516 - __main__ - INFO - Using PyTorch Device: cpu
+2025-07-08 19:58:31,747 - network.network_monitor - INFO - Discovered active network interfaces: ['MediaTek Wi-Fi 6 MT7921 Wireless LAN Card']
+2025-07-08 19:58:31,748 - network.network_monitor - INFO - Network monitoring started
+2025-07-08 19:58:38,997 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 19:58:39,738 - network.network_monitor - INFO - Successfully collected baseline statistics on attempt 1
+2025-07-08 19:58:39,738 - network.network_monitor - DEBUG - Baseline stats: defaultdict(<class 'dict'>, {'MediaTek Wi-Fi 6 MT7921 Wireless LAN Card': {'bandwidth_utilization': 0, 'latency': 3.0, 'packet_loss': 0, 'error_rate': 0, 'throughput': 0}})
+2025-07-08 19:58:39,738 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:58:39,738 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:58:39,738 - network.network_monitor - DEBUG -   Latency: 99.20
+2025-07-08 19:58:39,738 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:58:39,738 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:58:39,738 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.28
+2025-07-08 19:58:39,738 - network.network_monitor - INFO - Overall network performance score: 99.28%
+2025-07-08 19:58:39,738 - network.network_monitor - INFO - Network monitoring initialized. Baseline performance: 99.28%
+2025-07-08 19:58:39,738 - network.network_monitor - WARNING - Network monitoring is already active
+2025-07-08 19:58:41,746 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:58:41,747 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:58:41,747 - network.network_monitor - DEBUG -   Latency: 99.20
+2025-07-08 19:58:41,748 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:58:41,748 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:58:41,748 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.28
+2025-07-08 19:58:41,749 - network.network_monitor - INFO - Overall network performance score: 99.28%
+2025-07-08 19:58:43,816 - root - INFO - 
+Starting episode 1/1000
+2025-07-08 19:58:43,816 - network.network_monitor - INFO - Waiting for monitoring thread to stop...
+2025-07-08 19:58:45,468 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 19:58:45,828 - network.network_monitor - WARNING - Monitoring thread did not stop gracefully
+2025-07-08 19:58:45,865 - network.network_monitor - INFO - Network monitoring stopped and resources cleaned up
+2025-07-08 19:58:47,746 - network.network_monitor - INFO - Discovered active network interfaces: ['MediaTek Wi-Fi 6 MT7921 Wireless LAN Card']
+2025-07-08 19:58:47,747 - network.network_monitor - INFO - Network monitoring started
+2025-07-08 19:58:53,794 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 19:58:54,749 - network.network_monitor - INFO - Successfully collected baseline statistics on attempt 1
+2025-07-08 19:58:54,749 - network.network_monitor - DEBUG - Baseline stats: defaultdict(<class 'dict'>, {'MediaTek Wi-Fi 6 MT7921 Wireless LAN Card': {'bandwidth_utilization': 0, 'latency': 3.66666666666667, 'packet_loss': 0, 'error_rate': 0, 'throughput': 0}})
+2025-07-08 19:58:54,750 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:58:54,750 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:58:54,750 - network.network_monitor - DEBUG -   Latency: 99.57
+2025-07-08 19:58:54,751 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:58:54,751 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:58:54,751 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.37
+2025-07-08 19:58:54,751 - network.network_monitor - INFO - Overall network performance score: 99.37%
+2025-07-08 19:58:54,751 - network.network_monitor - INFO - Network monitoring initialized. Baseline performance: 99.37%
+2025-07-08 19:58:54,752 - network.network_monitor - WARNING - Network monitoring is already active
+2025-07-08 19:58:56,753 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:58:56,753 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:58:56,753 - network.network_monitor - DEBUG -   Latency: 99.57
+2025-07-08 19:58:56,753 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:58:56,753 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:58:56,753 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.37
+2025-07-08 19:58:56,753 - network.network_monitor - INFO - Overall network performance score: 99.37%
+2025-07-08 19:58:56,753 - network.network_environment - INFO - Environment reset - Initial Performance: 99.37%, Best Performance: 99.37%
+2025-07-08 19:58:56,753 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:58:56,753 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:58:56,753 - network.network_monitor - DEBUG -   Latency: 99.57
+2025-07-08 19:58:56,753 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:58:56,753 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:58:56,753 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.37
+2025-07-08 19:58:56,753 - network.network_monitor - INFO - Overall network performance score: 99.37%
+2025-07-08 19:58:57,775 - network.network_environment - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-07-08 19:58:59,777 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:58:59,777 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:58:59,777 - network.network_monitor - DEBUG -   Latency: 99.57
+2025-07-08 19:58:59,777 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:58:59,777 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:58:59,777 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.37
+2025-07-08 19:58:59,777 - network.network_monitor - INFO - Overall network performance score: 99.37%
+2025-07-08 19:58:59,788 - network.network_environment - INFO - Step 1: Performance=99.37%, Best=99.37%, Reward=0.00
+2025-07-08 19:58:59,788 - __main__ - INFO - Step 1: Action=1, Reward=0.00, Performance=99.37%, Best Performance=99.37%, Performance Change=0.00%, Baseline Improvement=0.00%, Relative to Best=0.00%, State Improvement=0.00
+2025-07-08 19:58:59,788 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:58:59,788 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:58:59,788 - network.network_monitor - DEBUG -   Latency: 99.57
+2025-07-08 19:58:59,788 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:58:59,788 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:58:59,788 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.37
+2025-07-08 19:58:59,788 - network.network_monitor - INFO - Overall network performance score: 99.37%
+2025-07-08 19:59:00,081 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 19:59:01,802 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:01,802 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:01,802 - network.network_monitor - DEBUG -   Latency: 99.63
+2025-07-08 19:59:01,802 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:01,804 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:01,804 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.38
+2025-07-08 19:59:01,804 - network.network_monitor - INFO - Overall network performance score: 99.38%
+2025-07-08 19:59:01,804 - network.network_environment - INFO - Step 2: Performance=99.38%, Best=99.38%, Reward=0.49
+2025-07-08 19:59:01,804 - __main__ - INFO - Step 2: Action=7, Reward=0.49, Performance=99.38%, Best Performance=99.38%, Performance Change=0.02%, Baseline Improvement=0.02%, Relative to Best=0.00%, State Improvement=-0.01
+2025-07-08 19:59:01,804 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:01,804 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:01,806 - network.network_monitor - DEBUG -   Latency: 99.63
+2025-07-08 19:59:01,806 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:01,806 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:01,806 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.38
+2025-07-08 19:59:01,806 - network.network_monitor - INFO - Overall network performance score: 99.38%
+2025-07-08 19:59:04,200 - network.network_environment - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-07-08 19:59:06,201 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:06,203 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:06,205 - network.network_monitor - DEBUG -   Latency: 99.63
+2025-07-08 19:59:06,205 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:06,205 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:06,205 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.38
+2025-07-08 19:59:06,205 - network.network_monitor - INFO - Overall network performance score: 99.38%
+2025-07-08 19:59:06,205 - network.network_environment - INFO - Step 3: Performance=99.38%, Best=99.38%, Reward=0.00
+2025-07-08 19:59:06,215 - __main__ - INFO - Step 3: Action=5, Reward=0.00, Performance=99.38%, Best Performance=99.38%, Performance Change=0.00%, Baseline Improvement=0.02%, Relative to Best=0.00%, State Improvement=0.00
+2025-07-08 19:59:06,218 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:06,220 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:06,222 - network.network_monitor - DEBUG -   Latency: 99.63
+2025-07-08 19:59:06,226 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:06,228 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:06,229 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.38
+2025-07-08 19:59:06,236 - network.network_monitor - INFO - Overall network performance score: 99.38%
+2025-07-08 19:59:06,492 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 19:59:07,103 - network.network_environment - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-07-08 19:59:09,105 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:09,105 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:09,105 - network.network_monitor - DEBUG -   Latency: 99.67
+2025-07-08 19:59:09,105 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:09,105 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:09,105 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.39
+2025-07-08 19:59:09,105 - network.network_monitor - INFO - Overall network performance score: 99.39%
+2025-07-08 19:59:09,105 - network.network_environment - INFO - Step 4: Performance=99.39%, Best=99.39%, Reward=-0.00
+2025-07-08 19:59:09,105 - __main__ - INFO - Step 4: Action=1, Reward=-0.00, Performance=99.39%, Best Performance=99.39%, Performance Change=0.01%, Baseline Improvement=0.03%, Relative to Best=0.00%, State Improvement=-0.00
+2025-07-08 19:59:09,105 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:09,105 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:09,105 - network.network_monitor - DEBUG -   Latency: 99.67
+2025-07-08 19:59:09,105 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:09,105 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:09,105 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.39
+2025-07-08 19:59:09,105 - network.network_monitor - INFO - Overall network performance score: 99.39%
+2025-07-08 19:59:09,209 - network.network_environment - INFO - Cache clearing completed
+2025-07-08 19:59:11,210 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:11,210 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:11,210 - network.network_monitor - DEBUG -   Latency: 99.67
+2025-07-08 19:59:11,210 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:11,210 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:11,210 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.39
+2025-07-08 19:59:11,210 - network.network_monitor - INFO - Overall network performance score: 99.39%
+2025-07-08 19:59:11,210 - network.network_environment - INFO - Step 5: Performance=99.39%, Best=99.39%, Reward=0.00
+2025-07-08 19:59:11,210 - __main__ - INFO - Step 5: Action=3, Reward=0.00, Performance=99.39%, Best Performance=99.39%, Performance Change=0.00%, Baseline Improvement=0.03%, Relative to Best=0.00%, State Improvement=0.00
+2025-07-08 19:59:11,210 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:11,210 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:11,210 - network.network_monitor - DEBUG -   Latency: 99.67
+2025-07-08 19:59:11,210 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:11,226 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:11,226 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.39
+2025-07-08 19:59:11,226 - network.network_monitor - INFO - Overall network performance score: 99.39%
+2025-07-08 19:59:11,284 - network.network_environment - INFO - DNS flush completed
+2025-07-08 19:59:12,793 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 19:59:13,285 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:13,285 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:13,285 - network.network_monitor - DEBUG -   Latency: 99.73
+2025-07-08 19:59:13,285 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:13,285 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:13,285 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.41
+2025-07-08 19:59:13,285 - network.network_monitor - INFO - Overall network performance score: 99.41%
+2025-07-08 19:59:13,285 - network.network_environment - INFO - Step 6: Performance=99.41%, Best=99.41%, Reward=-0.01
+2025-07-08 19:59:13,285 - __main__ - INFO - Step 6: Action=6, Reward=-0.01, Performance=99.41%, Best Performance=99.41%, Performance Change=0.02%, Baseline Improvement=0.04%, Relative to Best=0.00%, State Improvement=-0.01
+2025-07-08 19:59:13,285 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:13,285 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:13,285 - network.network_monitor - DEBUG -   Latency: 99.73
+2025-07-08 19:59:13,285 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:13,285 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:13,285 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.41
+2025-07-08 19:59:13,285 - network.network_monitor - INFO - Overall network performance score: 99.41%
+2025-07-08 19:59:13,340 - network.network_environment - INFO - Cache clearing completed
+2025-07-08 19:59:15,352 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:15,352 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:15,353 - network.network_monitor - DEBUG -   Latency: 99.73
+2025-07-08 19:59:15,353 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:15,354 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:15,354 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.41
+2025-07-08 19:59:15,354 - network.network_monitor - INFO - Overall network performance score: 99.41%
+2025-07-08 19:59:15,355 - network.network_environment - INFO - Step 7: Performance=99.41%, Best=99.41%, Reward=0.00
+2025-07-08 19:59:15,355 - __main__ - INFO - Step 7: Action=3, Reward=0.00, Performance=99.41%, Best Performance=99.41%, Performance Change=0.00%, Baseline Improvement=0.04%, Relative to Best=0.00%, State Improvement=0.00
+2025-07-08 19:59:15,355 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:15,356 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:15,356 - network.network_monitor - DEBUG -   Latency: 99.73
+2025-07-08 19:59:15,357 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:15,357 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:15,359 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.41
+2025-07-08 19:59:15,360 - network.network_monitor - INFO - Overall network performance score: 99.41%
+2025-07-08 19:59:15,581 - network.network_environment - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-07-08 19:59:17,583 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:17,583 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:17,584 - network.network_monitor - DEBUG -   Latency: 99.73
+2025-07-08 19:59:17,584 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:17,584 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:17,585 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.41
+2025-07-08 19:59:17,585 - network.network_monitor - INFO - Overall network performance score: 99.41%
+2025-07-08 19:59:17,585 - network.network_environment - INFO - Step 8: Performance=99.41%, Best=99.41%, Reward=0.00
+2025-07-08 19:59:17,587 - __main__ - INFO - Step 8: Action=4, Reward=0.00, Performance=99.41%, Best Performance=99.41%, Performance Change=0.00%, Baseline Improvement=0.04%, Relative to Best=0.00%, State Improvement=0.00
+2025-07-08 19:59:17,587 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:17,587 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:17,587 - network.network_monitor - DEBUG -   Latency: 99.73
+2025-07-08 19:59:17,588 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:17,588 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:17,588 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.41
+2025-07-08 19:59:17,589 - network.network_monitor - INFO - Overall network performance score: 99.41%
+2025-07-08 19:59:17,770 - network.network_environment - INFO - DNS flush completed
+2025-07-08 19:59:19,771 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:19,771 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:19,771 - network.network_monitor - DEBUG -   Latency: 99.73
+2025-07-08 19:59:19,772 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:19,772 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:19,772 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.41
+2025-07-08 19:59:19,772 - network.network_monitor - INFO - Overall network performance score: 99.41%
+2025-07-08 19:59:19,773 - network.network_environment - INFO - Step 9: Performance=99.41%, Best=99.41%, Reward=0.00
+2025-07-08 19:59:19,773 - __main__ - INFO - Step 9: Action=6, Reward=0.00, Performance=99.41%, Best Performance=99.41%, Performance Change=0.00%, Baseline Improvement=0.04%, Relative to Best=0.00%, State Improvement=0.00
+2025-07-08 19:59:19,773 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:19,773 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:19,773 - network.network_monitor - DEBUG -   Latency: 99.73
+2025-07-08 19:59:19,773 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:19,776 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:19,777 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.41
+2025-07-08 19:59:19,777 - network.network_monitor - INFO - Overall network performance score: 99.41%
+2025-07-08 19:59:19,942 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 19:59:21,778 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:21,778 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:21,778 - network.network_monitor - DEBUG -   Latency: 99.67
+2025-07-08 19:59:21,778 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:21,778 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:21,778 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.39
+2025-07-08 19:59:21,778 - network.network_monitor - INFO - Overall network performance score: 99.39%
+2025-07-08 19:59:21,778 - network.network_environment - INFO - Step 10: Performance=99.39%, Best=99.41%, Reward=0.51
+2025-07-08 19:59:21,778 - __main__ - INFO - Step 10: Action=7, Reward=0.51, Performance=99.39%, Best Performance=99.41%, Performance Change=-0.02%, Baseline Improvement=0.03%, Relative to Best=-0.02%, State Improvement=0.01
+2025-07-08 19:59:21,778 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:21,781 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:21,781 - network.network_monitor - DEBUG -   Latency: 99.67
+2025-07-08 19:59:21,781 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:21,781 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:21,781 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.39
+2025-07-08 19:59:21,781 - network.network_monitor - INFO - Overall network performance score: 99.39%
+2025-07-08 19:59:22,084 - network.network_environment - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-07-08 19:59:24,091 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:24,091 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:24,091 - network.network_monitor - DEBUG -   Latency: 99.67
+2025-07-08 19:59:24,091 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:24,092 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:24,092 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.39
+2025-07-08 19:59:24,092 - network.network_monitor - INFO - Overall network performance score: 99.39%
+2025-07-08 19:59:24,092 - network.network_environment - INFO - Step 11: Performance=99.39%, Best=99.41%, Reward=0.00
+2025-07-08 19:59:24,092 - __main__ - INFO - Step 11: Action=2, Reward=0.00, Performance=99.39%, Best Performance=99.41%, Performance Change=0.00%, Baseline Improvement=0.03%, Relative to Best=-0.02%, State Improvement=0.00
+2025-07-08 19:59:24,093 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:24,094 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:24,094 - network.network_monitor - DEBUG -   Latency: 99.67
+2025-07-08 19:59:24,094 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:24,094 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:24,094 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.39
+2025-07-08 19:59:24,094 - network.network_monitor - INFO - Overall network performance score: 99.39%
+2025-07-08 19:59:24,618 - network.network_environment - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-07-08 19:59:26,263 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 19:59:26,619 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:26,620 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:26,621 - network.network_monitor - DEBUG -   Latency: 99.57
+2025-07-08 19:59:26,621 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:26,622 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:26,622 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.37
+2025-07-08 19:59:26,623 - network.network_monitor - INFO - Overall network performance score: 99.37%
+2025-07-08 19:59:26,623 - network.network_environment - INFO - Step 12: Performance=99.37%, Best=99.41%, Reward=0.01
+2025-07-08 19:59:26,623 - __main__ - INFO - Step 12: Action=1, Reward=0.01, Performance=99.37%, Best Performance=99.41%, Performance Change=-0.03%, Baseline Improvement=0.00%, Relative to Best=-0.04%, State Improvement=0.01
+2025-07-08 19:59:26,624 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:26,624 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:26,625 - network.network_monitor - DEBUG -   Latency: 99.57
+2025-07-08 19:59:26,625 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:26,625 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:26,626 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.37
+2025-07-08 19:59:26,626 - network.network_monitor - INFO - Overall network performance score: 99.37%
+2025-07-08 19:59:26,700 - network.network_environment - INFO - Cache clearing completed
+2025-07-08 19:59:28,704 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:28,706 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:28,706 - network.network_monitor - DEBUG -   Latency: 99.57
+2025-07-08 19:59:28,708 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:28,708 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:28,708 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.37
+2025-07-08 19:59:28,708 - network.network_monitor - INFO - Overall network performance score: 99.37%
+2025-07-08 19:59:28,710 - network.network_environment - INFO - Step 13: Performance=99.37%, Best=99.41%, Reward=-0.00
+2025-07-08 19:59:28,710 - __main__ - INFO - Step 13: Action=3, Reward=-0.00, Performance=99.37%, Best Performance=99.41%, Performance Change=0.00%, Baseline Improvement=0.00%, Relative to Best=-0.04%, State Improvement=0.00
+2025-07-08 19:59:28,710 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:28,710 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:28,710 - network.network_monitor - DEBUG -   Latency: 99.57
+2025-07-08 19:59:28,714 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:28,714 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:28,714 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.37
+2025-07-08 19:59:28,714 - network.network_monitor - INFO - Overall network performance score: 99.37%
+2025-07-08 19:59:30,716 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:30,716 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:30,716 - network.network_monitor - DEBUG -   Latency: 99.57
+2025-07-08 19:59:30,716 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:30,716 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:30,716 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.37
+2025-07-08 19:59:30,719 - network.network_monitor - INFO - Overall network performance score: 99.37%
+2025-07-08 19:59:30,719 - network.network_environment - INFO - Step 14: Performance=99.37%, Best=99.41%, Reward=0.50
+2025-07-08 19:59:30,719 - __main__ - INFO - Step 14: Action=7, Reward=0.50, Performance=99.37%, Best Performance=99.41%, Performance Change=0.00%, Baseline Improvement=0.00%, Relative to Best=-0.04%, State Improvement=0.00
+2025-07-08 19:59:30,719 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:30,719 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:30,719 - network.network_monitor - DEBUG -   Latency: 99.57
+2025-07-08 19:59:30,719 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:30,719 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:30,719 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.37
+2025-07-08 19:59:30,719 - network.network_monitor - INFO - Overall network performance score: 99.37%
+2025-07-08 19:59:30,909 - network.network_environment - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-07-08 19:59:32,566 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 19:59:32,911 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:32,911 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:32,911 - network.network_monitor - DEBUG -   Latency: 99.37
+2025-07-08 19:59:32,911 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:32,911 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:32,911 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.32
+2025-07-08 19:59:32,911 - network.network_monitor - INFO - Overall network performance score: 99.32%
+2025-07-08 19:59:32,911 - network.network_environment - INFO - Step 15: Performance=99.32%, Best=99.41%, Reward=0.02
+2025-07-08 19:59:32,911 - __main__ - INFO - Step 15: Action=2, Reward=0.02, Performance=99.32%, Best Performance=99.41%, Performance Change=-0.05%, Baseline Improvement=-0.05%, Relative to Best=-0.09%, State Improvement=0.02
+2025-07-08 19:59:32,911 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:32,911 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:32,911 - network.network_monitor - DEBUG -   Latency: 99.37
+2025-07-08 19:59:32,911 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:32,911 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:32,911 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.32
+2025-07-08 19:59:32,911 - network.network_monitor - INFO - Overall network performance score: 99.32%
+2025-07-08 19:59:33,130 - network.network_environment - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-07-08 19:59:35,132 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:35,132 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:35,132 - network.network_monitor - DEBUG -   Latency: 99.37
+2025-07-08 19:59:35,132 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:35,132 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:35,132 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.32
+2025-07-08 19:59:35,132 - network.network_monitor - INFO - Overall network performance score: 99.32%
+2025-07-08 19:59:35,132 - network.network_environment - INFO - Step 16: Performance=99.32%, Best=99.41%, Reward=-0.00
+2025-07-08 19:59:35,132 - __main__ - INFO - Step 16: Action=2, Reward=-0.00, Performance=99.32%, Best Performance=99.41%, Performance Change=0.00%, Baseline Improvement=-0.05%, Relative to Best=-0.09%, State Improvement=0.00
+2025-07-08 19:59:35,132 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:35,132 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:35,132 - network.network_monitor - DEBUG -   Latency: 99.37
+2025-07-08 19:59:35,132 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:35,132 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:35,132 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.32
+2025-07-08 19:59:35,132 - network.network_monitor - INFO - Overall network performance score: 99.32%
+2025-07-08 19:59:35,808 - network.network_environment - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-07-08 19:59:37,810 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:37,810 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:37,810 - network.network_monitor - DEBUG -   Latency: 99.37
+2025-07-08 19:59:37,810 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:37,810 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:37,810 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.32
+2025-07-08 19:59:37,810 - network.network_monitor - INFO - Overall network performance score: 99.32%
+2025-07-08 19:59:37,810 - network.network_environment - INFO - Step 17: Performance=99.32%, Best=99.41%, Reward=-0.00
+2025-07-08 19:59:37,810 - __main__ - INFO - Step 17: Action=1, Reward=-0.00, Performance=99.32%, Best Performance=99.41%, Performance Change=0.00%, Baseline Improvement=-0.05%, Relative to Best=-0.09%, State Improvement=0.00
+2025-07-08 19:59:37,810 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:37,810 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:37,815 - network.network_monitor - DEBUG -   Latency: 99.37
+2025-07-08 19:59:37,816 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:37,816 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:37,817 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.32
+2025-07-08 19:59:37,817 - network.network_monitor - INFO - Overall network performance score: 99.32%
+2025-07-08 19:59:37,879 - network.network_environment - INFO - Cache clearing completed
+2025-07-08 19:59:38,852 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 19:59:39,880 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:39,880 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:39,880 - network.network_monitor - DEBUG -   Latency: 99.77
+2025-07-08 19:59:39,880 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:39,880 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:39,880 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.42
+2025-07-08 19:59:39,882 - network.network_monitor - INFO - Overall network performance score: 99.42%
+2025-07-08 19:59:39,882 - network.network_environment - INFO - Step 18: Performance=99.42%, Best=99.42%, Reward=-0.05
+2025-07-08 19:59:39,882 - __main__ - INFO - Step 18: Action=3, Reward=-0.05, Performance=99.42%, Best Performance=99.42%, Performance Change=0.10%, Baseline Improvement=0.05%, Relative to Best=0.00%, State Improvement=-0.05
+2025-07-08 19:59:39,882 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:39,882 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:39,882 - network.network_monitor - DEBUG -   Latency: 99.77
+2025-07-08 19:59:39,882 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:39,882 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:39,882 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.42
+2025-07-08 19:59:39,882 - network.network_monitor - INFO - Overall network performance score: 99.42%
+2025-07-08 19:59:42,181 - network.network_environment - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-07-08 19:59:44,182 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:44,182 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:44,182 - network.network_monitor - DEBUG -   Latency: 99.77
+2025-07-08 19:59:44,182 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:44,188 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:44,188 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.42
+2025-07-08 19:59:44,188 - network.network_monitor - INFO - Overall network performance score: 99.42%
+2025-07-08 19:59:44,193 - network.network_environment - INFO - Step 19: Performance=99.42%, Best=99.42%, Reward=0.00
+2025-07-08 19:59:44,194 - __main__ - INFO - Step 19: Action=5, Reward=0.00, Performance=99.42%, Best Performance=99.42%, Performance Change=0.00%, Baseline Improvement=0.05%, Relative to Best=0.00%, State Improvement=0.00
+2025-07-08 19:59:44,195 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:44,195 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:44,195 - network.network_monitor - DEBUG -   Latency: 99.77
+2025-07-08 19:59:44,201 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:44,201 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:44,207 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.42
+2025-07-08 19:59:44,209 - network.network_monitor - INFO - Overall network performance score: 99.42%
+2025-07-08 19:59:44,344 - network.network_environment - INFO - Cache clearing completed
+2025-07-08 19:59:45,092 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 19:59:46,345 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:46,345 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:46,345 - network.network_monitor - DEBUG -   Latency: 99.20
+2025-07-08 19:59:46,345 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:46,345 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:46,345 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.28
+2025-07-08 19:59:46,345 - network.network_monitor - INFO - Overall network performance score: 99.28%
+2025-07-08 19:59:46,345 - network.network_environment - INFO - Step 20: Performance=99.28%, Best=99.42%, Reward=0.06
+2025-07-08 19:59:46,345 - __main__ - INFO - Step 20: Action=3, Reward=0.06, Performance=99.28%, Best Performance=99.42%, Performance Change=-0.14%, Baseline Improvement=-0.09%, Relative to Best=-0.14%, State Improvement=0.07
+2025-07-08 19:59:46,345 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:46,345 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:46,345 - network.network_monitor - DEBUG -   Latency: 99.20
+2025-07-08 19:59:46,348 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:46,348 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:46,348 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.28
+2025-07-08 19:59:46,348 - network.network_monitor - INFO - Overall network performance score: 99.28%
+2025-07-08 19:59:46,412 - network.network_environment - INFO - Cache clearing completed
+2025-07-08 19:59:48,413 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:48,413 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:48,413 - network.network_monitor - DEBUG -   Latency: 99.20
+2025-07-08 19:59:48,413 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:48,413 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:48,415 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.28
+2025-07-08 19:59:48,415 - network.network_monitor - INFO - Overall network performance score: 99.28%
+2025-07-08 19:59:48,415 - network.network_environment - INFO - Step 21: Performance=99.28%, Best=99.42%, Reward=-0.00
+2025-07-08 19:59:48,415 - __main__ - INFO - Step 21: Action=3, Reward=-0.00, Performance=99.28%, Best Performance=99.42%, Performance Change=0.00%, Baseline Improvement=-0.09%, Relative to Best=-0.14%, State Improvement=0.00
+2025-07-08 19:59:48,415 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:48,415 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:48,415 - network.network_monitor - DEBUG -   Latency: 99.20
+2025-07-08 19:59:48,415 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:48,415 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:48,415 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.28
+2025-07-08 19:59:48,415 - network.network_monitor - INFO - Overall network performance score: 99.28%
+2025-07-08 19:59:50,580 - network.network_environment - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-07-08 19:59:50,968 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 19:59:52,582 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:52,582 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:52,582 - network.network_monitor - DEBUG -   Latency: 99.53
+2025-07-08 19:59:52,582 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:52,582 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:52,584 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.36
+2025-07-08 19:59:52,584 - network.network_monitor - INFO - Overall network performance score: 99.36%
+2025-07-08 19:59:52,584 - network.network_environment - INFO - Step 22: Performance=99.36%, Best=99.42%, Reward=-0.04
+2025-07-08 19:59:52,584 - __main__ - INFO - Step 22: Action=5, Reward=-0.04, Performance=99.36%, Best Performance=99.42%, Performance Change=0.08%, Baseline Improvement=-0.01%, Relative to Best=-0.06%, State Improvement=-0.04
+2025-07-08 19:59:52,584 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:52,584 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:52,584 - network.network_monitor - DEBUG -   Latency: 99.53
+2025-07-08 19:59:52,586 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:52,586 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:52,586 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.36
+2025-07-08 19:59:52,586 - network.network_monitor - INFO - Overall network performance score: 99.36%
+2025-07-08 19:59:54,771 - network.network_environment - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-07-08 19:59:56,772 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:56,773 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:56,773 - network.network_monitor - DEBUG -   Latency: 99.53
+2025-07-08 19:59:56,773 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:56,774 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:56,774 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.36
+2025-07-08 19:59:56,774 - network.network_monitor - INFO - Overall network performance score: 99.36%
+2025-07-08 19:59:56,775 - network.network_environment - INFO - Step 23: Performance=99.36%, Best=99.42%, Reward=-0.00
+2025-07-08 19:59:56,775 - __main__ - INFO - Step 23: Action=5, Reward=-0.00, Performance=99.36%, Best Performance=99.42%, Performance Change=0.00%, Baseline Improvement=-0.01%, Relative to Best=-0.06%, State Improvement=0.00
+2025-07-08 19:59:56,775 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:56,775 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:56,775 - network.network_monitor - DEBUG -   Latency: 99.53
+2025-07-08 19:59:56,776 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:56,776 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:56,776 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.36
+2025-07-08 19:59:56,776 - network.network_monitor - INFO - Overall network performance score: 99.36%
+2025-07-08 19:59:57,044 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 19:59:57,387 - network.network_environment - ERROR - Error managing QoS: Command '['powershell', '-Command', 'Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false; New-NetQosPolicy -Name "DefaultPolicy" -Default']' returned non-zero exit status 1.
+2025-07-08 19:59:59,388 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:59,388 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:59,388 - network.network_monitor - DEBUG -   Latency: 99.57
+2025-07-08 19:59:59,389 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:59,389 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:59,389 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.37
+2025-07-08 19:59:59,390 - network.network_monitor - INFO - Overall network performance score: 99.37%
+2025-07-08 19:59:59,390 - network.network_environment - INFO - Step 24: Performance=99.37%, Best=99.42%, Reward=-0.00
+2025-07-08 19:59:59,391 - __main__ - INFO - Step 24: Action=1, Reward=-0.00, Performance=99.37%, Best Performance=99.42%, Performance Change=0.01%, Baseline Improvement=0.00%, Relative to Best=-0.05%, State Improvement=-0.00
+2025-07-08 19:59:59,391 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 19:59:59,391 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 19:59:59,391 - network.network_monitor - DEBUG -   Latency: 99.57
+2025-07-08 19:59:59,392 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 19:59:59,392 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 19:59:59,392 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.37
+2025-07-08 19:59:59,393 - network.network_monitor - INFO - Overall network performance score: 99.37%
+2025-07-08 19:59:59,495 - network.network_environment - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-07-08 20:00:01,496 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:01,498 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:01,500 - network.network_monitor - DEBUG -   Latency: 99.57
+2025-07-08 20:00:01,501 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:01,502 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:01,503 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.37
+2025-07-08 20:00:01,503 - network.network_monitor - INFO - Overall network performance score: 99.37%
+2025-07-08 20:00:01,505 - network.network_environment - INFO - Step 25: Performance=99.37%, Best=99.42%, Reward=-0.00
+2025-07-08 20:00:01,505 - __main__ - INFO - Step 25: Action=4, Reward=-0.00, Performance=99.37%, Best Performance=99.42%, Performance Change=0.00%, Baseline Improvement=0.00%, Relative to Best=-0.05%, State Improvement=0.00
+2025-07-08 20:00:01,506 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:01,507 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:01,507 - network.network_monitor - DEBUG -   Latency: 99.57
+2025-07-08 20:00:01,509 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:01,509 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:01,509 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.37
+2025-07-08 20:00:01,509 - network.network_monitor - INFO - Overall network performance score: 99.37%
+2025-07-08 20:00:01,585 - network.network_environment - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-07-08 20:00:03,201 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 20:00:03,586 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:03,586 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:03,586 - network.network_monitor - DEBUG -   Latency: 99.70
+2025-07-08 20:00:03,587 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:03,587 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:03,588 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.40
+2025-07-08 20:00:03,589 - network.network_monitor - INFO - Overall network performance score: 99.40%
+2025-07-08 20:00:03,590 - network.network_environment - INFO - Step 26: Performance=99.40%, Best=99.42%, Reward=-0.02
+2025-07-08 20:00:03,590 - __main__ - INFO - Step 26: Action=4, Reward=-0.02, Performance=99.40%, Best Performance=99.42%, Performance Change=0.03%, Baseline Improvement=0.03%, Relative to Best=-0.02%, State Improvement=-0.02
+2025-07-08 20:00:03,590 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:03,590 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:03,590 - network.network_monitor - DEBUG -   Latency: 99.70
+2025-07-08 20:00:03,590 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:03,590 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:03,594 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.40
+2025-07-08 20:00:03,594 - network.network_monitor - INFO - Overall network performance score: 99.40%
+2025-07-08 20:00:03,652 - network.network_environment - INFO - Cache clearing completed
+2025-07-08 20:00:05,656 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:05,656 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:05,656 - network.network_monitor - DEBUG -   Latency: 99.70
+2025-07-08 20:00:05,657 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:05,657 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:05,657 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.40
+2025-07-08 20:00:05,658 - network.network_monitor - INFO - Overall network performance score: 99.40%
+2025-07-08 20:00:05,658 - network.network_environment - INFO - Step 27: Performance=99.40%, Best=99.42%, Reward=0.00
+2025-07-08 20:00:05,658 - __main__ - INFO - Step 27: Action=3, Reward=0.00, Performance=99.40%, Best Performance=99.42%, Performance Change=0.00%, Baseline Improvement=0.03%, Relative to Best=-0.02%, State Improvement=0.00
+2025-07-08 20:00:05,658 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:05,660 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:05,660 - network.network_monitor - DEBUG -   Latency: 99.70
+2025-07-08 20:00:05,660 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:05,661 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:05,661 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.40
+2025-07-08 20:00:05,661 - network.network_monitor - INFO - Overall network performance score: 99.40%
+2025-07-08 20:00:05,728 - network.network_environment - INFO - Cache clearing completed
+2025-07-08 20:00:07,730 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:07,730 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:07,730 - network.network_monitor - DEBUG -   Latency: 99.70
+2025-07-08 20:00:07,734 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:07,735 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:07,736 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.40
+2025-07-08 20:00:07,738 - network.network_monitor - INFO - Overall network performance score: 99.40%
+2025-07-08 20:00:07,739 - network.network_environment - INFO - Step 28: Performance=99.40%, Best=99.42%, Reward=0.00
+2025-07-08 20:00:07,740 - __main__ - INFO - Step 28: Action=3, Reward=0.00, Performance=99.40%, Best Performance=99.42%, Performance Change=0.00%, Baseline Improvement=0.03%, Relative to Best=-0.02%, State Improvement=0.00
+2025-07-08 20:00:07,741 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:07,743 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:07,744 - network.network_monitor - DEBUG -   Latency: 99.70
+2025-07-08 20:00:07,746 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:07,746 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:07,749 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.40
+2025-07-08 20:00:07,750 - network.network_monitor - INFO - Overall network performance score: 99.40%
+2025-07-08 20:00:07,833 - network.network_environment - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-07-08 20:00:09,435 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 20:00:09,834 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:09,834 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:09,834 - network.network_monitor - DEBUG -   Latency: 99.30
+2025-07-08 20:00:09,834 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:09,834 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:09,834 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.30
+2025-07-08 20:00:09,834 - network.network_monitor - INFO - Overall network performance score: 99.30%
+2025-07-08 20:00:09,834 - network.network_environment - INFO - Step 29: Performance=99.30%, Best=99.42%, Reward=0.04
+2025-07-08 20:00:09,834 - __main__ - INFO - Step 29: Action=4, Reward=0.04, Performance=99.30%, Best Performance=99.42%, Performance Change=-0.10%, Baseline Improvement=-0.07%, Relative to Best=-0.12%, State Improvement=0.05
+2025-07-08 20:00:09,834 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:09,834 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:09,837 - network.network_monitor - DEBUG -   Latency: 99.30
+2025-07-08 20:00:09,837 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:09,837 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:09,837 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.30
+2025-07-08 20:00:09,837 - network.network_monitor - INFO - Overall network performance score: 99.30%
+2025-07-08 20:00:09,868 - network.network_environment - INFO - DNS flush completed
+2025-07-08 20:00:11,869 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:11,869 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:11,869 - network.network_monitor - DEBUG -   Latency: 99.30
+2025-07-08 20:00:11,869 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:11,869 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:11,869 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.30
+2025-07-08 20:00:11,869 - network.network_monitor - INFO - Overall network performance score: 99.30%
+2025-07-08 20:00:11,869 - network.network_environment - INFO - Step 30: Performance=99.30%, Best=99.42%, Reward=-0.00
+2025-07-08 20:00:11,869 - __main__ - INFO - Step 30: Action=6, Reward=-0.00, Performance=99.30%, Best Performance=99.42%, Performance Change=0.00%, Baseline Improvement=-0.07%, Relative to Best=-0.12%, State Improvement=0.00
+2025-07-08 20:00:11,869 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:11,869 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:11,869 - network.network_monitor - DEBUG -   Latency: 99.30
+2025-07-08 20:00:11,869 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:11,869 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:11,869 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.30
+2025-07-08 20:00:11,869 - network.network_monitor - INFO - Overall network performance score: 99.30%
+2025-07-08 20:00:11,942 - network.network_environment - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-07-08 20:00:13,943 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:13,943 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:13,943 - network.network_monitor - DEBUG -   Latency: 99.30
+2025-07-08 20:00:13,943 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:13,943 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:13,943 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.30
+2025-07-08 20:00:13,943 - network.network_monitor - INFO - Overall network performance score: 99.30%
+2025-07-08 20:00:13,943 - network.network_environment - INFO - Step 31: Performance=99.30%, Best=99.42%, Reward=-0.00
+2025-07-08 20:00:13,943 - __main__ - INFO - Step 31: Action=4, Reward=-0.00, Performance=99.30%, Best Performance=99.42%, Performance Change=0.00%, Baseline Improvement=-0.07%, Relative to Best=-0.12%, State Improvement=0.00
+2025-07-08 20:00:13,943 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:13,943 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:13,943 - network.network_monitor - DEBUG -   Latency: 99.30
+2025-07-08 20:00:13,943 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:13,943 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:13,943 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.30
+2025-07-08 20:00:13,943 - network.network_monitor - INFO - Overall network performance score: 99.30%
+2025-07-08 20:00:15,467 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 20:00:15,948 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:15,948 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:15,948 - network.network_monitor - DEBUG -   Latency: 99.70
+2025-07-08 20:00:15,948 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:15,948 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:15,950 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.40
+2025-07-08 20:00:15,950 - network.network_monitor - INFO - Overall network performance score: 99.40%
+2025-07-08 20:00:15,950 - network.network_environment - INFO - Step 32: Performance=99.40%, Best=99.42%, Reward=0.45
+2025-07-08 20:00:15,950 - __main__ - INFO - Step 32: Action=7, Reward=0.45, Performance=99.40%, Best Performance=99.42%, Performance Change=0.10%, Baseline Improvement=0.03%, Relative to Best=-0.02%, State Improvement=-0.05
+2025-07-08 20:00:15,950 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:15,950 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:15,950 - network.network_monitor - DEBUG -   Latency: 99.70
+2025-07-08 20:00:15,950 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:15,950 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:15,950 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.40
+2025-07-08 20:00:15,950 - network.network_monitor - INFO - Overall network performance score: 99.40%
+2025-07-08 20:00:15,976 - network.network_environment - INFO - DNS flush completed
+2025-07-08 20:00:17,977 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:17,977 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:17,977 - network.network_monitor - DEBUG -   Latency: 99.70
+2025-07-08 20:00:17,977 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:17,977 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:17,977 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.40
+2025-07-08 20:00:17,977 - network.network_monitor - INFO - Overall network performance score: 99.40%
+2025-07-08 20:00:17,977 - network.network_environment - INFO - Step 33: Performance=99.40%, Best=99.42%, Reward=0.00
+2025-07-08 20:00:17,977 - __main__ - INFO - Step 33: Action=6, Reward=0.00, Performance=99.40%, Best Performance=99.42%, Performance Change=0.00%, Baseline Improvement=0.03%, Relative to Best=-0.02%, State Improvement=0.00
+2025-07-08 20:00:17,977 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:17,977 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:17,977 - network.network_monitor - DEBUG -   Latency: 99.70
+2025-07-08 20:00:17,977 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:17,977 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:17,977 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.40
+2025-07-08 20:00:17,977 - network.network_monitor - INFO - Overall network performance score: 99.40%
+2025-07-08 20:00:20,094 - network.network_environment - ERROR - Error balancing load: Command '['powershell', '-Command', 'Get-NetAdapter | Sort-Object -Property Speed -Descending | Set-NetIPInterface -InterfaceMetric 0']' returned non-zero exit status 1.
+2025-07-08 20:00:21,561 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 20:00:22,096 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:22,097 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:22,097 - network.network_monitor - DEBUG -   Latency: 98.80
+2025-07-08 20:00:22,097 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:22,101 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:22,104 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.18
+2025-07-08 20:00:22,105 - network.network_monitor - INFO - Overall network performance score: 99.18%
+2025-07-08 20:00:22,107 - network.network_environment - INFO - Step 34: Performance=99.18%, Best=99.42%, Reward=0.10
+2025-07-08 20:00:22,108 - __main__ - INFO - Step 34: Action=5, Reward=0.10, Performance=99.18%, Best Performance=99.42%, Performance Change=-0.23%, Baseline Improvement=-0.19%, Relative to Best=-0.24%, State Improvement=0.11
+2025-07-08 20:00:22,109 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:22,110 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:22,110 - network.network_monitor - DEBUG -   Latency: 98.80
+2025-07-08 20:00:22,113 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:22,115 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:22,117 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.18
+2025-07-08 20:00:22,118 - network.network_monitor - INFO - Overall network performance score: 99.18%
+2025-07-08 20:00:22,305 - network.network_environment - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-07-08 20:00:24,313 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:24,313 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:24,313 - network.network_monitor - DEBUG -   Latency: 98.80
+2025-07-08 20:00:24,313 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:24,313 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:24,315 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.18
+2025-07-08 20:00:24,315 - network.network_monitor - INFO - Overall network performance score: 99.18%
+2025-07-08 20:00:24,315 - network.network_environment - INFO - Step 35: Performance=99.18%, Best=99.42%, Reward=-0.01
+2025-07-08 20:00:24,315 - __main__ - INFO - Step 35: Action=0, Reward=-0.01, Performance=99.18%, Best Performance=99.42%, Performance Change=0.00%, Baseline Improvement=-0.19%, Relative to Best=-0.24%, State Improvement=0.00
+2025-07-08 20:00:24,315 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:24,315 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:24,317 - network.network_monitor - DEBUG -   Latency: 98.80
+2025-07-08 20:00:24,317 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:24,317 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:24,317 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.18
+2025-07-08 20:00:24,317 - network.network_monitor - INFO - Overall network performance score: 99.18%
+2025-07-08 20:00:24,491 - network.network_environment - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-07-08 20:00:26,492 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:26,492 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:26,492 - network.network_monitor - DEBUG -   Latency: 98.80
+2025-07-08 20:00:26,497 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:26,498 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:26,498 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.18
+2025-07-08 20:00:26,502 - network.network_monitor - INFO - Overall network performance score: 99.18%
+2025-07-08 20:00:26,503 - network.network_environment - INFO - Step 36: Performance=99.18%, Best=99.42%, Reward=-0.01
+2025-07-08 20:00:26,504 - __main__ - INFO - Step 36: Action=2, Reward=-0.01, Performance=99.18%, Best Performance=99.42%, Performance Change=0.00%, Baseline Improvement=-0.19%, Relative to Best=-0.24%, State Improvement=0.00
+2025-07-08 20:00:26,505 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:26,506 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:26,508 - network.network_monitor - DEBUG -   Latency: 98.80
+2025-07-08 20:00:26,510 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:26,512 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:26,512 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.18
+2025-07-08 20:00:26,514 - network.network_monitor - INFO - Overall network performance score: 99.18%
+2025-07-08 20:00:27,498 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 20:00:28,517 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:28,519 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:28,519 - network.network_monitor - DEBUG -   Latency: 99.50
+2025-07-08 20:00:28,519 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:28,522 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:28,526 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.35
+2025-07-08 20:00:28,527 - network.network_monitor - INFO - Overall network performance score: 99.35%
+2025-07-08 20:00:28,530 - network.network_environment - INFO - Step 37: Performance=99.35%, Best=99.42%, Reward=0.42
+2025-07-08 20:00:28,530 - __main__ - INFO - Step 37: Action=7, Reward=0.42, Performance=99.35%, Best Performance=99.42%, Performance Change=0.18%, Baseline Improvement=-0.02%, Relative to Best=-0.07%, State Improvement=-0.09
+2025-07-08 20:00:28,532 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:28,532 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:28,534 - network.network_monitor - DEBUG -   Latency: 99.50
+2025-07-08 20:00:28,534 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:28,534 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:28,538 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.35
+2025-07-08 20:00:28,539 - network.network_monitor - INFO - Overall network performance score: 99.35%
+2025-07-08 20:00:30,541 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:30,541 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:30,541 - network.network_monitor - DEBUG -   Latency: 99.50
+2025-07-08 20:00:30,541 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:30,541 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:30,541 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.35
+2025-07-08 20:00:30,541 - network.network_monitor - INFO - Overall network performance score: 99.35%
+2025-07-08 20:00:30,541 - network.network_environment - INFO - Step 38: Performance=99.35%, Best=99.42%, Reward=0.50
+2025-07-08 20:00:30,541 - __main__ - INFO - Step 38: Action=7, Reward=0.50, Performance=99.35%, Best Performance=99.42%, Performance Change=0.00%, Baseline Improvement=-0.02%, Relative to Best=-0.07%, State Improvement=0.00
+2025-07-08 20:00:30,541 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:30,541 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:30,541 - network.network_monitor - DEBUG -   Latency: 99.50
+2025-07-08 20:00:30,546 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:30,546 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:30,546 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.35
+2025-07-08 20:00:30,546 - network.network_monitor - INFO - Overall network performance score: 99.35%
+2025-07-08 20:00:30,573 - network.network_environment - INFO - DNS flush completed
+2025-07-08 20:00:32,575 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:32,575 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:32,575 - network.network_monitor - DEBUG -   Latency: 99.50
+2025-07-08 20:00:32,575 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:32,580 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:32,580 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.35
+2025-07-08 20:00:32,580 - network.network_monitor - INFO - Overall network performance score: 99.35%
+2025-07-08 20:00:32,585 - network.network_environment - INFO - Step 39: Performance=99.35%, Best=99.42%, Reward=-0.00
+2025-07-08 20:00:32,586 - __main__ - INFO - Step 39: Action=6, Reward=-0.00, Performance=99.35%, Best Performance=99.42%, Performance Change=0.00%, Baseline Improvement=-0.02%, Relative to Best=-0.07%, State Improvement=0.00
+2025-07-08 20:00:32,587 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:32,589 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:32,589 - network.network_monitor - DEBUG -   Latency: 99.50
+2025-07-08 20:00:32,591 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:32,593 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:32,595 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.35
+2025-07-08 20:00:32,598 - network.network_monitor - INFO - Overall network performance score: 99.35%
+2025-07-08 20:00:32,787 - network.network_environment - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-07-08 20:00:33,336 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 20:00:34,789 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:34,789 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:34,789 - network.network_monitor - DEBUG -   Latency: 99.60
+2025-07-08 20:00:34,789 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:34,791 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:34,791 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.38
+2025-07-08 20:00:34,791 - network.network_monitor - INFO - Overall network performance score: 99.38%
+2025-07-08 20:00:34,791 - network.network_environment - INFO - Step 40: Performance=99.38%, Best=99.42%, Reward=-0.01
+2025-07-08 20:00:34,791 - __main__ - INFO - Step 40: Action=2, Reward=-0.01, Performance=99.38%, Best Performance=99.42%, Performance Change=0.03%, Baseline Improvement=0.01%, Relative to Best=-0.04%, State Improvement=-0.01
+2025-07-08 20:00:34,791 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:34,793 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:34,793 - network.network_monitor - DEBUG -   Latency: 99.60
+2025-07-08 20:00:34,793 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:34,793 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:34,793 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.38
+2025-07-08 20:00:34,793 - network.network_monitor - INFO - Overall network performance score: 99.38%
+2025-07-08 20:00:34,973 - network.network_environment - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-07-08 20:00:36,974 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:36,974 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:36,974 - network.network_monitor - DEBUG -   Latency: 99.60
+2025-07-08 20:00:36,975 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:36,976 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:36,976 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.38
+2025-07-08 20:00:36,976 - network.network_monitor - INFO - Overall network performance score: 99.38%
+2025-07-08 20:00:36,976 - network.network_environment - INFO - Step 41: Performance=99.38%, Best=99.42%, Reward=-0.00
+2025-07-08 20:00:36,976 - __main__ - INFO - Step 41: Action=2, Reward=-0.00, Performance=99.38%, Best Performance=99.42%, Performance Change=0.00%, Baseline Improvement=0.01%, Relative to Best=-0.04%, State Improvement=0.00
+2025-07-08 20:00:36,976 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:36,976 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:36,976 - network.network_monitor - DEBUG -   Latency: 99.60
+2025-07-08 20:00:36,976 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:36,976 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:36,976 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.38
+2025-07-08 20:00:36,976 - network.network_monitor - INFO - Overall network performance score: 99.38%
+2025-07-08 20:00:37,174 - network.network_environment - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-07-08 20:00:39,147 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 20:00:39,177 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:39,177 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:39,177 - network.network_monitor - DEBUG -   Latency: 99.70
+2025-07-08 20:00:39,178 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:39,178 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:39,179 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.40
+2025-07-08 20:00:39,180 - network.network_monitor - INFO - Overall network performance score: 99.40%
+2025-07-08 20:00:39,180 - network.network_environment - INFO - Step 42: Performance=99.40%, Best=99.42%, Reward=-0.01
+2025-07-08 20:00:39,181 - __main__ - INFO - Step 42: Action=2, Reward=-0.01, Performance=99.40%, Best Performance=99.42%, Performance Change=0.03%, Baseline Improvement=0.03%, Relative to Best=-0.02%, State Improvement=-0.01
+2025-07-08 20:00:39,181 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:39,181 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:39,182 - network.network_monitor - DEBUG -   Latency: 99.70
+2025-07-08 20:00:39,182 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:39,183 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:39,183 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.40
+2025-07-08 20:00:39,185 - network.network_monitor - INFO - Overall network performance score: 99.40%
+2025-07-08 20:00:39,348 - network.network_environment - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-07-08 20:00:41,349 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:41,349 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:41,349 - network.network_monitor - DEBUG -   Latency: 99.70
+2025-07-08 20:00:41,349 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:41,349 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:41,349 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.40
+2025-07-08 20:00:41,349 - network.network_monitor - INFO - Overall network performance score: 99.40%
+2025-07-08 20:00:41,349 - network.network_environment - INFO - Step 43: Performance=99.40%, Best=99.42%, Reward=0.00
+2025-07-08 20:00:41,349 - __main__ - INFO - Step 43: Action=2, Reward=0.00, Performance=99.40%, Best Performance=99.42%, Performance Change=0.00%, Baseline Improvement=0.03%, Relative to Best=-0.02%, State Improvement=0.00
+2025-07-08 20:00:41,349 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:41,349 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:41,349 - network.network_monitor - DEBUG -   Latency: 99.70
+2025-07-08 20:00:41,349 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:41,349 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:41,349 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.40
+2025-07-08 20:00:41,354 - network.network_monitor - INFO - Overall network performance score: 99.40%
+2025-07-08 20:00:43,355 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:43,355 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:43,355 - network.network_monitor - DEBUG -   Latency: 99.70
+2025-07-08 20:00:43,355 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:43,355 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:43,355 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.40
+2025-07-08 20:00:43,355 - network.network_monitor - INFO - Overall network performance score: 99.40%
+2025-07-08 20:00:43,366 - network.network_environment - INFO - Step 44: Performance=99.40%, Best=99.42%, Reward=0.50
+2025-07-08 20:00:43,367 - __main__ - INFO - Step 44: Action=7, Reward=0.50, Performance=99.40%, Best Performance=99.42%, Performance Change=0.00%, Baseline Improvement=0.03%, Relative to Best=-0.02%, State Improvement=0.00
+2025-07-08 20:00:43,368 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:43,371 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:43,373 - network.network_monitor - DEBUG -   Latency: 99.70
+2025-07-08 20:00:43,375 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:43,375 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:43,380 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.40
+2025-07-08 20:00:43,384 - network.network_monitor - INFO - Overall network performance score: 99.40%
+2025-07-08 20:00:43,563 - network.network_environment - ERROR - Error resetting interface: Command '['netsh', 'interface', 'set', 'interface', 'name=*', 'admin=disabled']' returned non-zero exit status 1.
+2025-07-08 20:00:44,897 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 20:00:45,564 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:45,564 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:45,566 - network.network_monitor - DEBUG -   Latency: 99.67
+2025-07-08 20:00:45,566 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:45,566 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:45,566 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.39
+2025-07-08 20:00:45,566 - network.network_monitor - INFO - Overall network performance score: 99.39%
+2025-07-08 20:00:45,573 - network.network_environment - INFO - Step 45: Performance=99.39%, Best=99.42%, Reward=0.00
+2025-07-08 20:00:45,574 - __main__ - INFO - Step 45: Action=2, Reward=0.00, Performance=99.39%, Best Performance=99.42%, Performance Change=-0.01%, Baseline Improvement=0.03%, Relative to Best=-0.03%, State Improvement=0.00
+2025-07-08 20:00:45,575 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:45,575 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:45,578 - network.network_monitor - DEBUG -   Latency: 99.67
+2025-07-08 20:00:45,578 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:45,578 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:45,578 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.39
+2025-07-08 20:00:45,578 - network.network_monitor - INFO - Overall network performance score: 99.39%
+2025-07-08 20:00:45,665 - network.network_environment - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-07-08 20:00:47,671 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:47,671 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:47,671 - network.network_monitor - DEBUG -   Latency: 99.67
+2025-07-08 20:00:47,671 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:47,671 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:47,671 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.39
+2025-07-08 20:00:47,671 - network.network_monitor - INFO - Overall network performance score: 99.39%
+2025-07-08 20:00:47,671 - network.network_environment - INFO - Step 46: Performance=99.39%, Best=99.42%, Reward=0.00
+2025-07-08 20:00:47,671 - __main__ - INFO - Step 46: Action=4, Reward=0.00, Performance=99.39%, Best Performance=99.42%, Performance Change=0.00%, Baseline Improvement=0.03%, Relative to Best=-0.03%, State Improvement=0.00
+2025-07-08 20:00:47,671 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:47,674 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:47,674 - network.network_monitor - DEBUG -   Latency: 99.67
+2025-07-08 20:00:47,674 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:47,674 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:47,674 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.39
+2025-07-08 20:00:47,674 - network.network_monitor - INFO - Overall network performance score: 99.39%
+2025-07-08 20:00:49,676 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:49,676 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:49,676 - network.network_monitor - DEBUG -   Latency: 99.67
+2025-07-08 20:00:49,676 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:49,676 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:49,676 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.39
+2025-07-08 20:00:49,676 - network.network_monitor - INFO - Overall network performance score: 99.39%
+2025-07-08 20:00:49,676 - network.network_environment - INFO - Step 47: Performance=99.39%, Best=99.42%, Reward=0.50
+2025-07-08 20:00:49,676 - __main__ - INFO - Step 47: Action=7, Reward=0.50, Performance=99.39%, Best Performance=99.42%, Performance Change=0.00%, Baseline Improvement=0.03%, Relative to Best=-0.03%, State Improvement=0.00
+2025-07-08 20:00:49,676 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:49,676 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:49,676 - network.network_monitor - DEBUG -   Latency: 99.67
+2025-07-08 20:00:49,676 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:49,676 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:49,676 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.39
+2025-07-08 20:00:49,676 - network.network_monitor - INFO - Overall network performance score: 99.39%
+2025-07-08 20:00:49,730 - network.network_environment - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-07-08 20:00:50,605 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 20:00:51,731 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:51,731 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:51,731 - network.network_monitor - DEBUG -   Latency: 99.53
+2025-07-08 20:00:51,731 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:51,731 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:51,733 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.36
+2025-07-08 20:00:51,733 - network.network_monitor - INFO - Overall network performance score: 99.36%
+2025-07-08 20:00:51,733 - network.network_environment - INFO - Step 48: Performance=99.36%, Best=99.42%, Reward=0.01
+2025-07-08 20:00:51,733 - __main__ - INFO - Step 48: Action=0, Reward=0.01, Performance=99.36%, Best Performance=99.42%, Performance Change=-0.03%, Baseline Improvement=-0.01%, Relative to Best=-0.06%, State Improvement=0.02
+2025-07-08 20:00:51,733 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:51,735 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:51,735 - network.network_monitor - DEBUG -   Latency: 99.53
+2025-07-08 20:00:51,735 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:51,735 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:51,735 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.36
+2025-07-08 20:00:51,735 - network.network_monitor - INFO - Overall network performance score: 99.36%
+2025-07-08 20:00:51,794 - network.network_environment - ERROR - Error optimizing TCP: Command '['netsh', 'int', 'ip', 'reset']' returned non-zero exit status 1.
+2025-07-08 20:00:53,809 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:53,809 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:53,809 - network.network_monitor - DEBUG -   Latency: 99.53
+2025-07-08 20:00:53,809 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:53,809 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:53,811 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.36
+2025-07-08 20:00:53,811 - network.network_monitor - INFO - Overall network performance score: 99.36%
+2025-07-08 20:00:53,811 - network.network_environment - INFO - Step 49: Performance=99.36%, Best=99.42%, Reward=-0.00
+2025-07-08 20:00:53,811 - __main__ - INFO - Step 49: Action=4, Reward=-0.00, Performance=99.36%, Best Performance=99.42%, Performance Change=0.00%, Baseline Improvement=-0.01%, Relative to Best=-0.06%, State Improvement=0.00
+2025-07-08 20:00:53,811 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:53,811 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:53,811 - network.network_monitor - DEBUG -   Latency: 99.53
+2025-07-08 20:00:53,811 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:53,811 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:53,811 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.36
+2025-07-08 20:00:53,811 - network.network_monitor - INFO - Overall network performance score: 99.36%
+2025-07-08 20:00:53,867 - network.network_environment - ERROR - Error optimizing routing: Command '['route', 'FLUSH']' returned non-zero exit status 1.
+2025-07-08 20:00:55,868 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card scores:
+2025-07-08 20:00:55,868 - network.network_monitor - DEBUG -   Bandwidth: 99.00
+2025-07-08 20:00:55,868 - network.network_monitor - DEBUG -   Latency: 99.53
+2025-07-08 20:00:55,868 - network.network_monitor - DEBUG -   Packet Loss: 99.90
+2025-07-08 20:00:55,868 - network.network_monitor - DEBUG -   Error Rate: 99.00
+2025-07-08 20:00:55,868 - network.network_monitor - DEBUG - Interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card overall score: 99.36
+2025-07-08 20:00:55,868 - network.network_monitor - INFO - Overall network performance score: 99.36%
+2025-07-08 20:00:55,868 - network.network_environment - INFO - Step 50: Performance=99.36%, Best=99.42%, Reward=-0.00
+2025-07-08 20:00:55,868 - __main__ - INFO - Step 50: Action=0, Reward=-0.00, Performance=99.36%, Best Performance=99.42%, Performance Change=0.00%, Baseline Improvement=-0.01%, Relative to Best=-0.06%, State Improvement=0.00
+2025-07-08 20:00:55,868 - __main__ - INFO - Action 0 success rate: 33.33%
+2025-07-08 20:00:55,868 - __main__ - INFO - Action 1 success rate: 20.00%
+2025-07-08 20:00:55,868 - __main__ - INFO - Action 2 success rate: 44.44%
+2025-07-08 20:00:55,868 - __main__ - INFO - Action 3 success rate: 62.50%
+2025-07-08 20:00:55,868 - __main__ - INFO - Action 4 success rate: 42.86%
+2025-07-08 20:00:55,868 - __main__ - INFO - Action 5 success rate: 60.00%
+2025-07-08 20:00:55,868 - __main__ - INFO - Action 6 success rate: 40.00%
+2025-07-08 20:00:55,868 - __main__ - INFO - Action 7 success rate: 100.00%
+2025-07-08 20:00:55,887 - agent.dqn_agent - INFO - Model saved to models\best_reward_model.pth
+2025-07-08 20:00:55,887 - __main__ - INFO - New best reward model saved with average reward: 3.97
+2025-07-08 20:00:55,891 - agent.dqn_agent - INFO - Model saved to models\best_performance_model.pth
+2025-07-08 20:00:55,892 - __main__ - INFO - New best performance model saved with performance: 99.42%
+2025-07-08 20:00:55,896 - agent.dqn_agent - INFO - Model saved to models\checkpoint_episode_0.pth
+2025-07-08 20:00:55,897 - __main__ - ERROR - Error during training: Object of type float32 is not JSON serializable
+2025-07-08 20:00:55,899 - agent.dqn_agent - INFO - Model saved to models\final_model.pth
+2025-07-08 20:00:55,900 - __main__ - ERROR - Error saving final results: Object of type float32 is not JSON serializable
+2025-07-08 20:00:55,902 - network.network_monitor - INFO - Waiting for monitoring thread to stop...
+2025-07-08 20:00:56,388 - network.network_monitor - WARNING - No response from gateway 192.168.1.254 for interface MediaTek Wi-Fi 6 MT7921 Wireless LAN Card
+2025-07-08 20:00:56,388 - network.network_monitor - DEBUG - Network statistics updated successfully
+2025-07-08 20:00:57,392 - network.network_monitor - INFO - Network monitoring stopped and resources cleaned up

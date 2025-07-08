@@ -8,18 +8,39 @@ from datetime import datetime
 import logging
 
 def setup_logging():
+    # Create logs directory if it doesn't exist
+    os.makedirs('logs', exist_ok=True)
+    
+    # Generate timestamp for unique log file
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    log_file = f'logs/training_{timestamp}.log'
+    
     logging.basicConfig(
         level=logging.INFO,
-        format='%(asctime)s - %(levelname)s - %(message)s',
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
         handlers=[
-            logging.FileHandler('training.log'),
+            logging.FileHandler(log_file),
             logging.StreamHandler()
         ]
     )
+    
+    # Set debug level for specific loggers
+    logging.getLogger('network.network_monitor').setLevel(logging.DEBUG)
+    logging.getLogger('network.network_environment').setLevel(logging.DEBUG)
+    
+    return logging.getLogger(__name__)
 
 def train_agent(episodes=1000, max_steps=50, save_interval=10):
-    setup_logging()
-    logging.info("Starting training process")
+    logger = setup_logging()
+    logger.info("Starting training process with enhanced monitoring")
+    
+    # Log training parameters
+    logger.info(f"Training Parameters:")
+    logger.info(f"Episodes: {episodes}")
+    logger.info(f"Max Steps per Episode: {max_steps}")
+    logger.info(f"Save Interval: {save_interval}")
+    logger.info(f"Using PyTorch Device: {torch.device('cuda' if torch.cuda.is_available() else 'cpu')}")
+
     
     # Create environment and agent
     env = NetworkEnvironment()
@@ -74,24 +95,29 @@ def train_agent(episodes=1000, max_steps=50, save_interval=10):
                     episode_performances.append(info['performance'])
                     state = next_state
                     
-                    # Log step information with detailed metrics
-                    logging.info(
+                    # Log step information with enhanced metrics
+                    logger.info(
                         f"Step {step + 1}: Action={action}, Reward={reward:.2f}, "
                         f"Performance={info['performance']:.2f}%, "
-                        f"Action Reward={info.get('action_reward', 0):.2f}, "
-                        f"State Improvement={info.get('state_improvement', 0):.2f}"
+                        f"Best Performance={info['best_performance']:.2f}%, "
+                        f"Performance Change={info['performance_change']*100:.2f}%, "
+                        f"Baseline Improvement={info['baseline_improvement']*100:.2f}%, "
+                        f"Relative to Best={info['relative_to_best']*100:.2f}%, "
+                        f"State Improvement={info['state_improvement']:.2f}"
                     )
                     
                     if done:
                         break
                         
                 except Exception as e:
-                    logging.error(f"Error during step execution: {str(e)}")
+                    logger.error(f"Error during step execution: {str(e)}")
                     continue
             
-            # Calculate episode statistics
+            # Calculate enhanced episode statistics
             episode_avg_performance = np.mean(episode_performances) if episode_performances else 0
             episode_max_performance = np.max(episode_performances) if episode_performances else 0
+            episode_min_performance = np.min(episode_performances) if episode_performances else 0
+            performance_improvement = episode_max_performance - episode_min_performance
             
             # Update metrics
             metrics['episode_rewards'].append(episode_reward)
@@ -103,7 +129,7 @@ def train_agent(episodes=1000, max_steps=50, save_interval=10):
             for i in range(env.action_space):
                 if metrics['action_counts'][i] > 0:
                     success_rate = metrics['action_success_rate'][i] / metrics['action_counts'][i]
-                    logging.info(f"Action {i} success rate: {success_rate:.2%}")
+                    logger.info(f"Action {i} success rate: {success_rate:.2%}")
             
             # Calculate averages
             avg_reward = np.mean(metrics['episode_rewards'][-100:]) if metrics['episode_rewards'] else 0
@@ -113,12 +139,12 @@ def train_agent(episodes=1000, max_steps=50, save_interval=10):
             if avg_reward > best_avg_reward:
                 best_avg_reward = avg_reward
                 agent.save(os.path.join(model_dir, 'best_reward_model.pth'))
-                logging.info(f"New best reward model saved with average reward: {avg_reward:.2f}")
+                logger.info(f"New best reward model saved with average reward: {avg_reward:.2f}")
             
             if episode_max_performance > best_performance:
                 best_performance = episode_max_performance
                 agent.save(os.path.join(model_dir, 'best_performance_model.pth'))
-                logging.info(f"New best performance model saved with performance: {best_performance:.2f}%")
+                logger.info(f"New best performance model saved with performance: {best_performance:.2f}%")
             
             # Save checkpoint periodically
             if episode % save_interval == 0:
@@ -142,23 +168,33 @@ def train_agent(episodes=1000, max_steps=50, save_interval=10):
                 with open(metrics_path, 'w') as f:
                     json.dump(detailed_metrics, f, indent=4)
                 
-                logging.info(f"Checkpoint saved at episode {episode}")
-                logging.info(f"Current average reward: {avg_reward:.2f}")
-                logging.info(f"Current average performance: {avg_performance:.2f}%")
+                logger.info(f"Checkpoint saved at episode {episode}")
+                logger.info(f"Current average reward: {avg_reward:.2f}")
+                logger.info(f"Current average performance: {avg_performance:.2f}%")
             
-            # Log episode summary
-            logging.info(f"Episode {episode + 1} Summary:")
-            logging.info(f"Total Reward: {episode_reward:.2f}")
+            # Log enhanced episode summary
+            logger.info(f"Episode {episode + 1} Summary:")
+            logger.info(f"Total Reward: {episode_reward:.2f}")
+            logger.info(f"Performance Metrics:")
+            logger.info(f"  - Maximum: {episode_max_performance:.2f}%")
+            logger.info(f"  - Average: {episode_avg_performance:.2f}%")
+            logger.info(f"  - Minimum: {episode_min_performance:.2f}%")
+            logger.info(f"  - Improvement: {performance_improvement:.2f}%")
             if episode_losses:
-                logging.info(f"Average Loss: {np.mean(episode_losses):.4f}")
-            logging.info(f"Final Performance: {episode_max_performance:.2f}%")
-            logging.info(f"Epsilon: {agent.epsilon:.4f}")
+                logger.info(f"Training Metrics:")
+                logger.info(f"  - Average Loss: {np.mean(episode_losses):.4f}")
+                logger.info(f"  - Min Loss: {np.min(episode_losses):.4f}")
+                logger.info(f"  - Max Loss: {np.max(episode_losses):.4f}")
+            logger.info(f"Agent State:")
+            logger.info(f"  - Epsilon: {agent.epsilon:.4f}")
+            logger.info(f"  - Memory Size: {len(agent.memory)}")
+            logger.info(f"  - Learning Rate: {agent.learning_rate:.6f}")
     
     except KeyboardInterrupt:
-        logging.info("\nTraining interrupted by user")
+        logger.warning("\nTraining interrupted by user")
     
     except Exception as e:
-        logging.error(f"Error during training: {str(e)}")
+        logger.error(f"Error during training: {str(e)}")
     
     finally:
         # Save final model and metrics
@@ -170,12 +206,12 @@ def train_agent(episodes=1000, max_steps=50, save_interval=10):
             with open(final_metrics_path, 'w') as f:
                 json.dump(metrics, f, indent=4)
             
-            logging.info("\nTraining completed!")
-            logging.info(f"Final model saved to: {final_model_path}")
-            logging.info(f"Final metrics saved to: {final_metrics_path}")
+            logger.info("\nTraining completed!")
+            logger.info(f"Final model saved to: {final_model_path}")
+            logger.info(f"Final metrics saved to: {final_metrics_path}")
         
         except Exception as e:
-            logging.error(f"Error saving final results: {str(e)}")
+            logger.error(f"Error saving final results: {str(e)}")
         
         # Cleanup
         env.cleanup()

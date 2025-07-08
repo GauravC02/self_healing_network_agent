@@ -9,6 +9,9 @@ import os
 
 Experience = namedtuple('Experience', ['state', 'action', 'reward', 'next_state', 'done'])
 
+# Set up logger
+logger = logging.getLogger(__name__)
+
 class DQNNetwork(nn.Module):
     def __init__(self, state_size, action_size):
         super(DQNNetwork, self).__init__()
@@ -44,15 +47,19 @@ class DQNAgent:
         self.device = device
         self.memory = deque(maxlen=100000)  # Increased memory size
         
-        # Hyperparameters
-        self.gamma = 0.99  # Discount factor
-        self.epsilon = 1.0  # Initial exploration rate
-        self.epsilon_min = 0.05  # Minimum exploration rate
-        self.epsilon_decay = 0.997  # Slower decay for better exploration
-        self.learning_rate = 0.0005  # Reduced learning rate for stability
-        self.batch_size = 128  # Increased batch size
-        self.update_target_frequency = 5  # More frequent target updates
-        self.tau = 0.001  # Soft update parameter
+        # Hyperparameters tuned for the new reward system
+        self.gamma = 0.95       # Reduced discount factor to focus more on immediate rewards
+        self.epsilon = 1.0      # Initial exploration rate
+        self.epsilon_min = 0.1  # Increased minimum exploration rate
+        self.epsilon_decay = 0.995  # Adjusted decay rate
+        self.learning_rate = 0.001  # Increased learning rate for faster adaptation
+        self.batch_size = 64    # Smaller batch size for more frequent updates
+        self.update_target_frequency = 10  # Less frequent target updates for stability
+        self.tau = 0.01        # Increased soft update parameter for faster target network updates
+        
+        # Additional stability parameters
+        self.grad_clip = 1.0    # Gradient clipping threshold
+        self.reward_clip = 5.0  # Reward clipping threshold
         
         # Initialize networks
         self.policy_net = DQNNetwork(state_size, action_size).to(device)
@@ -83,8 +90,10 @@ class DQNAgent:
         self.training_steps = 0
     
     def remember(self, state, action, reward, next_state, done):
-        """Store experience in replay memory"""
-        self.memory.append(Experience(state, action, reward, next_state, done))
+        """Store experience in replay memory with reward clipping"""
+        # Clip reward to stabilize learning
+        clipped_reward = max(min(reward, self.reward_clip), -self.reward_clip)
+        self.memory.append(Experience(state, action, clipped_reward, next_state, done))
     
     def act(self, state, training=True):
         """Select action using epsilon-greedy policy"""
@@ -130,9 +139,20 @@ class DQNAgent:
             # Optimize the model
             self.optimizer.zero_grad()
             loss.backward()
-            # Clip gradients to prevent exploding gradients
-            torch.nn.utils.clip_grad_norm_(self.policy_net.parameters(), max_norm=1.0)
+            # Clip gradients with configured threshold
+            torch.nn.utils.clip_grad_norm_(self.policy_net.parameters(), max_norm=self.grad_clip)
             self.optimizer.step()
+            
+            # Log training metrics periodically
+            if self.training_steps % 100 == 0:
+                with torch.no_grad():
+                    avg_q = current_q_values.mean().item()
+                    max_q = current_q_values.max().item()
+                    logger.debug(f"Training step {self.training_steps}: "
+                                f"Loss={loss.item():.4f}, "
+                                f"Avg Q={avg_q:.4f}, "
+                                f"Max Q={max_q:.4f}, "
+                                f"Epsilon={self.epsilon:.4f}")
             
             # Soft update target network
             self.training_steps += 1
@@ -145,7 +165,7 @@ class DQNAgent:
             return loss.item()
             
         except Exception as e:
-            logging.error(f"Error in replay: {str(e)}")
+            logger.error(f"Error in replay: {str(e)}")
             return None
     
     def _soft_update_target_network(self):
@@ -183,7 +203,7 @@ class DQNAgent:
             'epsilon': self.epsilon,
             'training_steps': self.training_steps
         }, path)
-        logging.info(f"Model saved to {path}")
+        logger.info(f"Model saved to {path}")
     
     def load(self, path):
         """Load model weights"""
@@ -194,6 +214,6 @@ class DQNAgent:
             self.optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
             self.epsilon = checkpoint['epsilon']
             self.training_steps = checkpoint['training_steps']
-            logging.info(f"Model loaded from {path}")
+            logger.info(f"Model loaded from {path}")
             return True
         return False

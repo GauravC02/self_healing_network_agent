@@ -1,32 +1,26 @@
 {
-    "episode_rewards": [
-        0
-    ],
-    "network_performance": [
-        0
-    ],
-    "healing_actions": [
-        []
-    ],
+    "episode_rewards": [],
+    "network_performance": [],
+    "healing_actions": [],
     "training_losses": [],
     "action_success_rate": [
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        2,
+        1,
+        4,
+        1,
+        2,
+        1,
+        2
     ],
     "action_counts": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        6,
+        2,
+        5,
+        3,
+        3,
+        6,
+        2
     ]
 }
